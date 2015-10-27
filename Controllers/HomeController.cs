@@ -44,34 +44,50 @@ namespace MvcApplication4_natpot.Controllers
             {
                 string name = collection["name"];
                 string phone = collection["phone"];
+                string body = "Имя: " + name + "\n";
+                body += "Телефон: " + phone + "\n";
+                string subject = "Запись на замер c сайта natpotolki";
 
-                System.Web.Mail.MailMessage mail = new System.Web.Mail.MailMessage();
+                if (Convert.ToBoolean(ConfigurationManager.AppSettings["UseAgavaMail"]))
+                {
+                    MailMessage mailObj = new MailMessage();
+                    mailObj.From = new MailAddress(ConfigurationManager.AppSettings["messageFrom"]);
+                    mailObj.To.Add(ConfigurationManager.AppSettings["messageTo"]);
+                    mailObj.Subject = subject;
+                    mailObj.Body = body;
 
-                string SMTP_SERVER = "http://schemas.microsoft.com/cdo/configuration/smtpserver";
-                string SMTP_SERVER_PORT = "http://schemas.microsoft.com/cdo/configuration/smtpserverport";
-                string SEND_USING = "http://schemas.microsoft.com/cdo/configuration/sendusing";
-                string SMTP_USE_SSL = "http://schemas.microsoft.com/cdo/configuration/smtpusessl";
-                string SMTP_AUTHENTICATE = "http://schemas.microsoft.com/cdo/configuration/smtpauthenticate";
-                string SEND_USERNAME = "http://schemas.microsoft.com/cdo/configuration/sendusername";
-                string SEND_PASSWORD = "http://schemas.microsoft.com/cdo/configuration/sendpassword";
+                    SmtpClient SMTPServer = new SmtpClient("localhost");
+                    SMTPServer.Send(mailObj);
+                }
+                else
+                {
+                    System.Web.Mail.MailMessage mail = new System.Web.Mail.MailMessage();
 
-                mail.Fields[SMTP_SERVER] = ConfigurationManager.AppSettings["SMTP"];
-                mail.Fields[SMTP_SERVER_PORT] = 465;
-                mail.Fields[SEND_USING] = 2;
-                mail.Fields[SMTP_USE_SSL] = true;
-                mail.Fields[SMTP_AUTHENTICATE] = 1;
-                mail.Fields[SEND_USERNAME] = ConfigurationManager.AppSettings["SMTP_login"];
-                mail.Fields[SEND_PASSWORD] = ConfigurationManager.AppSettings["SMTP_password"];
+                    string SMTP_SERVER = "http://schemas.microsoft.com/cdo/configuration/smtpserver";
+                    string SMTP_SERVER_PORT = "http://schemas.microsoft.com/cdo/configuration/smtpserverport";
+                    string SEND_USING = "http://schemas.microsoft.com/cdo/configuration/sendusing";
+                    string SMTP_USE_SSL = "http://schemas.microsoft.com/cdo/configuration/smtpusessl";
+                    string SMTP_AUTHENTICATE = "http://schemas.microsoft.com/cdo/configuration/smtpauthenticate";
+                    string SEND_USERNAME = "http://schemas.microsoft.com/cdo/configuration/sendusername";
+                    string SEND_PASSWORD = "http://schemas.microsoft.com/cdo/configuration/sendpassword";
 
-                mail.From = ConfigurationManager.AppSettings["messageFrom"];
-                mail.To = ConfigurationManager.AppSettings["messageTo"];
-                mail.Subject = "Запись на замер c сайта natpotolki";
-                mail.BodyFormat = System.Web.Mail.MailFormat.Text;
-                mail.Body += "Имя: " + name + "\n";
-                mail.Body += "Телефон: " + phone + "\n";
+                    mail.Fields[SMTP_SERVER] = ConfigurationManager.AppSettings["SMTP"];
+                    mail.Fields[SMTP_SERVER_PORT] = 465;
+                    mail.Fields[SEND_USING] = 2;
+                    mail.Fields[SMTP_USE_SSL] = true;
+                    mail.Fields[SMTP_AUTHENTICATE] = 1;
+                    mail.Fields[SEND_USERNAME] = ConfigurationManager.AppSettings["SMTP_login"];
+                    mail.Fields[SEND_PASSWORD] = ConfigurationManager.AppSettings["SMTP_password"];
 
-                System.Web.Mail.SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SMTP"] + ":465";
-                System.Web.Mail.SmtpMail.Send(mail);
+                    mail.From = ConfigurationManager.AppSettings["messageFrom"];
+                    mail.To = ConfigurationManager.AppSettings["messageTo"];
+                    mail.Subject = subject;
+                    mail.BodyFormat = System.Web.Mail.MailFormat.Text;
+                    mail.Body += body;
+
+                    System.Web.Mail.SmtpMail.SmtpServer = ConfigurationManager.AppSettings["SMTP"] + ":465";
+                    System.Web.Mail.SmtpMail.Send(mail);
+                }
 
                 jm.Result = true;
                 jm.Message = "Мы получили Ваш запрос и скоро свяжемся с Вами...";
