@@ -3,3 +3,7 @@ Thumbs.db
 ehthumbs.db
 
 obj/
+bin/MvcApplication4_natpot.pdb
+bin/MvcApplication4_natpot.dll
+obj/Debug/
+*.dll

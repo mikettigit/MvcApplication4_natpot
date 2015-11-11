@@ -79,3 +79,4 @@ C:\Trial\__ЗАПАС\Фриланс\Сайты\MvcApplication4_natpot\MvcApplic
 C:\Trial\__ЗАПАС\Фриланс\Сайты\MvcApplication4_natpot\MvcApplication4_natpot\obj\Debug\MvcApplication4_natpot.csprojResolveAssemblyReference.cache
 C:\Trial\__ЗАПАС\Фриланс\Сайты\MvcApplication4_natpot\MvcApplication4_natpot\obj\Debug\MvcApplication4_natpot.dll
 C:\Trial\__ЗАПАС\Фриланс\Сайты\MvcApplication4_natpot\MvcApplication4_natpot\obj\Debug\MvcApplication4_natpot.pdb
+E:\Работа\Сайты\MvcApplication4_natpot\MvcApplication4_natpot\obj\Debug\MvcApplication4_natpot.csprojResolveAssemblyReference.cache
