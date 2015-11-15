@@ -23,6 +23,10 @@ namespace MvcApplication4_natpot.Controllers
             {
                 ViewData["Post"] = Dm.GetItem("247");
             }
+            if (param1.ToLower() == "exclusive.cshtml")
+            {
+                ViewData["Post"] = Dm.GetItem("766");
+            }
 
             string ViewFileName = "~/Views/Pages/" + param1;
 
