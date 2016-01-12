@@ -21,6 +21,7 @@ function init_yandex_maps()
 }
 
 $(document).ready(function() {
+
   $(".coolimage").fancybox({
     helpers : {
       title : {
@@ -35,4 +36,10 @@ $(document).ready(function() {
     script.src="http://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU&onload=init_yandex_maps";
     $("body").append(script);
   }
+
+  $(".akcia3").hover(
+          function () { $(this).find('.dropdown').stop().show(300); },
+          function () { $(this).find('.dropdown').stop().hide(0); }
+  );
+
 });
