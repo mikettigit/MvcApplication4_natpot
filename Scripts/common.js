@@ -38,8 +38,18 @@ $(document).ready(function() {
   }
 
   $(".akcia3").hover(
-          function () { $(this).find('.dropdown').stop().show(300); },
-          function () { $(this).find('.dropdown').stop().hide(0); }
+          function () {
+              var dropdown = $(this).find('.dropdown');
+              dropdown.css("z-index", 98);
+              dropdown.parent().find(".title").css("z-index", 99);
+              dropdown.stop().show(300);
+          },
+          function () {
+              var dropdown = $(this).find('.dropdown');
+              dropdown.css("z-index", 9);
+              dropdown.parent().find(".title").css("z-index", 10);
+              dropdown.stop().hide(0);
+          }
   );
 
   $(".akcia3 .dropdown").each(function(){

@@ -2413,6 +2413,9 @@
   <ItemGroup>
     <Content Include="Views\Pages\Exclusive.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\Rollets.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

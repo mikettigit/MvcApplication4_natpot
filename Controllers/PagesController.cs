@@ -19,6 +19,10 @@ namespace MvcApplication4_natpot.Controllers
             {
                 ViewData["Post"] = Dm.GetItem("234");
             }
+            if (param1.ToLower() == "rollets.cshtml")
+            {
+                ViewData["Post"] = Dm.GetItem("873");
+            }
             if (param1.ToLower() == "pricerequest.cshtml")
             {
                 ViewData["Post"] = Dm.GetItem("247");
