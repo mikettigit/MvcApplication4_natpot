@@ -31,6 +31,10 @@ namespace MvcApplication4_natpot.Controllers
             {
                 ViewData["Post"] = Dm.GetItem("766");
             }
+            if (param1.ToLower() == "photoforprinting.cshtml")
+            {
+                ViewData["Post"] = Dm.GetItem("950");
+            }
 
             string ViewFileName = "~/Views/Pages/" + param1;
 

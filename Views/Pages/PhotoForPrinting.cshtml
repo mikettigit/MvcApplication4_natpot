@@ -1,0 +1,24 @@
+﻿@using MvcApplication4_natpot.Models
+@{
+    Post Post = (Post)ViewData["Post"];
+    ViewBag.Title = "Фото для печати";
+	ViewBag.MetaKeywords = "";
+    ViewBag.MetaDescription = "";
+    ViewBag.MetaTitle = Post.Meta_Title;
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<article class="article clearfix">
+    @if (Post != null)
+    {
+        @Html.Raw(Post.Content)
+    }
+    else {
+        <h1 class="a_title">@ViewBag.Title</h1>
+
+        <div class="a_body clearfix">
+            <p style="text-align: center;"><em><strong>Раздел находится в стадии наполнения</strong></em></p>
+        </div>
+    }
+</article>
+
