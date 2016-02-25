@@ -7,6 +7,12 @@
     ViewBag.MetaDescription = Post.Meta_Description;
 	ViewBag.MetaTitle = Post.Meta_Title;
     Layout = "~/Views/Shared/SiteLayout.cshtml";
+
+    string GalleryName = "Gallery";
+    if (Post.Id == "963" || Post.Id == "990" || Post.Id == "1017" || Post.Id == "1038" || Post.Id == "1042")
+    {
+        GalleryName = "PhotoForPrinting";
+    }
 }
 
 <article class="article clearfix">
@@ -17,7 +23,7 @@
         @Html.Raw(Post.Content)  
         <div class="clear"></div>
         <br /><br />
-        <a href="/Gallery" class="more"><< вернуться к списку</a>
+        <a href="/@GalleryName" class="more"><< вернуться к списку</a>
     </div>
 
 </article>
