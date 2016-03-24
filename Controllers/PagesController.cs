@@ -15,13 +15,18 @@ namespace MvcApplication4_natpot.Controllers
 
         public ActionResult Index(string param1)
         {
+            Session.Remove("IsAboutBlinds");
+            Session.Remove("IsAboutRollets");
+
             if (param1.ToLower() == "blinds.cshtml")
             {
                 ViewData["Post"] = Dm.GetItem("234");
+                Session.Add("IsAboutBlinds", true);
             }
             if (param1.ToLower() == "rollets.cshtml")
             {
                 ViewData["Post"] = Dm.GetItem("873");
+                Session.Add("IsAboutRollets", true);
             }
             if (param1.ToLower() == "pricerequest.cshtml")
             {

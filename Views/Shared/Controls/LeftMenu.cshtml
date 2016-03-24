@@ -1,18 +1,34 @@
 ﻿<div class="content_submenu">
-    <a href="/InstallationStages/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "InstallationStages")">Этапы монтажа</a>
-    <a href="/ColorRequest/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "ColorRequest")">Выбрать цвет</a>
-    <a href="/PriceRequest/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "PriceRequest")">Цены</a>
-    <a href="/Exclusive/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "Exclusive")" style="line-height: 20px; padding-top: 10px; padding-bottom: 10px;">Потолки нового поколения</a>
-    <a href="/PhotoForPrinting/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "PhotoForPrinting")">Фото для печати</a>
-    <a href="/MeasurementRequest">Записаться на замер</a>
-    <a href="/CeilingsInstallation/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "CeilingsInstallation")">Монтаж потолка</a>
     @{
-        string[] ChildrenItems = { "CeilingsInstallation", "MaskingBand", "PipeBypass", "Lights" };
-        if (ChildrenItems.Any(s => s.ToLower() == Path.GetFileNameWithoutExtension(((RazorView)ViewContext.View).ViewPath).ToLower()))
+        bool IsAboutBlinds = Session["IsAboutBlinds"] != null;
+        bool IsAboutRollets = Session["IsAboutRollets"] != null;
+    }
+    @{
+        if (!IsAboutBlinds && !IsAboutRollets) { 
+            <a href="/InstallationStages/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "InstallationStages")">Этапы монтажа</a>
+            <a href="/ColorRequest/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "ColorRequest")">Выбрать цвет</a>
+            <a href="/PriceRequest/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "PriceRequest")">Цены</a>
+            <a href="/Exclusive/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "Exclusive")" style="line-height: 20px; padding-top: 10px; padding-bottom: 10px;">Потолки нового поколения</a>
+        }
+    }
+    @{
+        if (!IsAboutRollets)
         {
-            <a href="/MaskingBand/" class="content_submenu_submenu @CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "MaskingBand")">Маскировочная лента</a>
-            <a href="/PipeBypass/" class="content_submenu_submenu @CommonHtmlHelpers.MenuItemClass(ViewContext, " selected", "PipeBypass")">Обводы труб, карнизы</a>
-            <a href="/Lights/" class="content_submenu_submenu @CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "Lights")">Светильники</a>
+            <a href="/PhotoForPrinting/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "PhotoForPrinting")">Фото для печати</a>
+        }
+    }
+    <a href="/MeasurementRequest">Записаться на замер</a>
+    @{
+        if (!IsAboutBlinds && !IsAboutRollets) {
+            <a href="/CeilingsInstallation/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "CeilingsInstallation")">Монтаж потолка</a>
+            
+            string[] ChildrenItems = { "CeilingsInstallation", "MaskingBand", "PipeBypass", "Lights" };
+            if (ChildrenItems.Any(s => s.ToLower() == Path.GetFileNameWithoutExtension(((RazorView)ViewContext.View).ViewPath).ToLower()))
+            {
+                <a href="/MaskingBand/" class="content_submenu_submenu @CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "MaskingBand")">Маскировочная лента</a>
+                <a href="/PipeBypass/" class="content_submenu_submenu @CommonHtmlHelpers.MenuItemClass(ViewContext, " selected", "PipeBypass")">Обводы труб, карнизы</a>
+                <a href="/Lights/" class="content_submenu_submenu @CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "Lights")">Светильники</a>
+            }
         }
     }
     <a href="/ForDealers/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "ForDealers")@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "list", "item", "fordealers")">Дилерам</a>
