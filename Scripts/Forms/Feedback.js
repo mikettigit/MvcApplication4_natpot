@@ -35,10 +35,56 @@
         }
 
         clientPhoneField = thisButton.parent().find("[name=clientPhone]");
+        clientPhoneField.removeClass("error");
+        phoneChars = " +-()1234567890";
         phoneString = clientPhoneField.val();
+        if (phoneString.length > 0) {
+            if (phoneString.length < 5) {
+                clientPhoneField.addClass("error");
+                isError = true;
+            }
+            else {
+                i = 0;
+                while (ch = phoneString.substr(i, 1)) {
+                    if (phoneChars.indexOf(ch) == -1) {
+                        clientPhoneField.addClass("error");
+                        isError = true;
+                        break;
+                    }
+                    i++;
+                }
+            }
+        }
 
         clientEmailField = thisButton.parent().find("[name=clientEmail]");
+        clientEmailField.removeClass("error");
+        emailChars = "_-.@~qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789";
         emailString = clientEmailField.val();
+        if (emailString.length > 0) {
+            if (emailString.length < 6) {
+                clientEmailField.addClass("error");
+                isError = true;
+            }
+            else {
+                i = 0;
+                HasAt = false;
+                while (ch = emailString.substr(i, 1)) {
+                    if (emailChars.indexOf(ch) == -1) {
+                        clientEmailField.addClass("error");
+                        isError = true;
+                        break;
+                    }
+                    if (ch == "@") {
+                        HasAt = true;
+                    }
+                    i++;
+                }
+                if (!HasAt) {
+                    clientEmailField.addClass("error");
+                    isError = true;
+                }
+            }
+        }
 
         if (!isError) {
 

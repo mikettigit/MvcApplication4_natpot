@@ -3,6 +3,7 @@ using MvcApplication4_natpot.Models;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net.Mail;
 using System.Web;
@@ -44,12 +45,15 @@ namespace MvcApplication4_natpot.Controllers
             {
                 string name = collection["name"];
                 string phone = collection["phone"];
+                string email = collection["email"];
                 string body = "Имя: " + name + "\n";
                 body += "Телефон: " + phone + "\n";
+                body += "Email: " + email + "\n";
                 string subject = "Запись на замер c сайта natpotolki";
 
                 if (Convert.ToBoolean(ConfigurationManager.AppSettings["UseAgavaMail"]))
                 {
+                    //1
                     MailMessage mailObj = new MailMessage();
                     mailObj.From = new MailAddress(ConfigurationManager.AppSettings["messageFrom"]);
                     mailObj.To.Add(ConfigurationManager.AppSettings["messageTo"]);
@@ -58,6 +62,27 @@ namespace MvcApplication4_natpot.Controllers
 
                     SmtpClient SMTPServer = new SmtpClient("localhost");
                     SMTPServer.Send(mailObj);
+
+                    //2
+                    if (!String.IsNullOrWhiteSpace(email))
+                    {
+                        MailMessage mailObj2 = new MailMessage();
+                        mailObj2.From = new MailAddress(ConfigurationManager.AppSettings["messageFrom"]);
+                        mailObj2.To.Add(email);
+                        mailObj2.Subject = "Облако. Благодарим Вас за обращение в нашу компанию";
+
+                        string filename = Server.MapPath("/Content/templates/mail.htm");
+                        if (System.IO.File.Exists(filename))
+                        {
+                            using (StreamReader sr = new StreamReader(filename))
+                            {
+                                mailObj2.Body = sr.ReadToEnd();
+                            };
+                            mailObj2.IsBodyHtml = true;
+
+                            SMTPServer.Send(mailObj2);
+                        }
+                    }
                 }
                 else
                 {
