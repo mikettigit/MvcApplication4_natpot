@@ -40,6 +40,14 @@ namespace MvcApplication4_natpot.Controllers
             {
                 ViewData["Post"] = Dm.GetItem("950");
             }
+            if (param1.ToLower() == "fordealers.cshtml")
+            {
+                ViewData["Post"] = Dm.GetItem("1588");
+            }
+            if (param1.ToLower() == "fordealers_blinds.cshtml")
+            {
+                ViewData["Post"] = Dm.GetItem("1596");
+            }
 
             string ViewFileName = "~/Views/Pages/" + param1;
 

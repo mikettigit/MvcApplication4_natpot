@@ -31,6 +31,21 @@
             }
         }
     }
-    <a href="/ForDealers/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "ForDealers")@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "list", "item", "fordealers")">Дилерам</a>
+
+    @{
+        if (IsAboutBlinds)
+        {
+            <a href="/ForDealers_Blinds/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "ForDealers")@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "list", "item", "fordealers")">Дилерам</a>
+        }
+        else if (IsAboutRollets)
+        {
+            
+        }
+        else
+        {
+            <a href="/ForDealers/" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "ForDealers")@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "list", "item", "fordealers")">Дилерам</a>
+        }
+    }    
+    
     <a href="/List/Vacancies" class="@CommonHtmlHelpers.MenuItemClass(ViewContext, "selected", "list", "list", "vacancies")">ВАКАНСИИ</a>
 </div>

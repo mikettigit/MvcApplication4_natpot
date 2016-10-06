@@ -2419,6 +2419,12 @@
   <ItemGroup>
     <Content Include="Views\Pages\PhotoForPrinting.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\ForDealers_Ceilings.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pages\ForDealers_Blinds.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
