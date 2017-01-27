@@ -36,7 +36,7 @@
 	//$headers = "From: {$from}";
 	//$headers .= "\nReply-To: {$from}";
 	//$headers .= "Content-Type: text/html; charset=utf-8";
-  mail("Katerinich1@rambler.ru", $subject, $message, $headers);
+  mail("Oblako-51@yandex.ru", $subject, $message, $headers);
   mail("lu-bo@yandex.ru", $subject, $message, $headers);
 
 	echo "status=1";
