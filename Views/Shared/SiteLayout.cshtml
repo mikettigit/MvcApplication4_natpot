@@ -5,7 +5,26 @@
 <html lang="ru">
 <!--<![endif]-->
 <head>
-   <title>@(String.IsNullOrEmpty(ViewBag.MetaTitle) ? ViewBag.Title : ViewBag.MetaTitle)</title>
+
+    <script src="/Scripts/jquery.js"></script>
+    <script src="/Scripts/jquery.cookie.js"></script>
+    <script type='text/javascript'>
+        if (location.href.toLowerCase().indexOf("nomobile") > -1) {
+            $.cookie("nomobile", true, {
+                expires: 1,
+                path: '/'
+            });
+        }
+        var nomobile = $.cookie("nomobile");
+        if (nomobile == null) {
+            if (window.innerWidth < 1024) {
+                //location.href = "m." + location.hostname.replace("www.", "");
+                location.href = "//m.natpotolki.ru/";
+            }
+        }
+    </script>
+
+    <title>@(String.IsNullOrEmpty(ViewBag.MetaTitle) ? ViewBag.Title : ViewBag.MetaTitle)</title>
     <meta charset="windows-1251">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="@(String.IsNullOrEmpty(ViewBag.MetaDescription) ? "натяжные потолки Мурманск" : ViewBag.MetaDescription)">
@@ -19,7 +38,6 @@
     <link rel="stylesheet" href="/Content/Styles/styles.css">
     <!--[if lt IE 9]><script src="/Scripts/html5shiv.js"></script><![endif]-->
 
-    <script src="/Scripts/jquery.js"></script>
     <script src="/Scripts/fancybox.js"></script>
     <script src="/Scripts/common.js"></script>
     <script src="/Scripts/carousel.js"></script>
