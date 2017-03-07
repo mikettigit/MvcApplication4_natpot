@@ -60,27 +60,27 @@
 		 *
 		 * @param string html The error message HTML
 		 */
-		self.errorMessage = function (html, showTitle) {
-			// Display the message
-			var $message = $('<div class="quform-error-message"/>');
+		//self.errorMessage = function (html, showTitle) {
+		//	// Display the message
+		//	var $message = $('<div class="quform-error-message"/>');
 
-			if (showTitle !== false) {
-			    $message.append($('<div class="quform-error-title"/>').html(options.errorTitle));
-			}
+		//	if (showTitle !== false) {
+		//	    $message.append($('<div class="quform-error-title"/>').html(options.errorTitle));
+		//	}
 
-	        $message.append(html)
-	                .hide();
+	    //    $message.append(html)
+	    //            .hide();
 
-	        if (options.errorPosition == 'below') {
-	            $message.insertAfter(self.$container);
-	        } else {
-	            $message.insertBefore(self.$container);
-	        }
+	    //    if (options.errorPosition == 'below') {
+	    //        $message.insertAfter(self.$container);
+	    //    } else {
+	    //        $message.insertBefore(self.$container);
+	    //    }
 
-	        $message.fadeIn('slow');
+	    //    $message.fadeIn('slow');
 
-			self.scrollTo($message);
-		};
+		//	self.scrollTo($message);
+		//};
 
 		/**
 		 * Scroll to a DOM element if it's not in the current viewport
@@ -241,11 +241,11 @@
 					// Reset the form
 					self.reset();
 
-					if (typeof response.responseText === 'string' && response.responseText.length > 0) {
-						self.errorMessage('<pre>' + response.responseText + '</pre>');
-					} else {
-						self.errorMessage(options.errorAjax);
-					}
+					//if (typeof response.responseText === 'string' && response.responseText.length > 0) {
+					//	self.errorMessage('<pre>' + response.responseText + '</pre>');
+					//} else {
+					//	self.errorMessage(options.errorAjax);
+					//}
 				}
 			}); // $form.ajaxSubmit()
 		}); // $form.bind('submit')
