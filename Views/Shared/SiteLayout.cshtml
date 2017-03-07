@@ -10,10 +10,7 @@
     <script src="/Scripts/jquery.cookie.js"></script>
     <script type='text/javascript'>
         if (location.href.toLowerCase().indexOf("nomobile") > -1) {
-            $.cookie("nomobile", true, {
-                expires: 1,
-                path: '/'
-            });
+            $.cookie("nomobile", true);
         }
         var nomobile = $.cookie("nomobile");
         if (nomobile == null) {
