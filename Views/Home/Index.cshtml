@@ -70,6 +70,21 @@
 
 <div class="last_news_title">Новости компании</div>
 <div>
+    <script>
+        function proportion(newsboxes) {
+            var maxheigth = 0;
+            for (var i = 0; i < newsboxes.length; i++) {
+                if ($(newsboxes[i]).height() > maxheigth) {
+                    maxheigth = $(newsboxes[i]).height();
+                }
+            }
+            newsboxes.height(maxheigth);
+        }
+        $(document).ready(function(){
+            proportion($(".last_news.clearfix .last_news_title"));
+            proportion($(".last_news.clearfix .last_news_descr"));
+        })
+    </script>
     @for (var i = 0; i < Math.Min(3, Posts.Count); i++) { 
     <div class="last_news clearfix">
         <div class="last_news_title">
@@ -78,11 +93,13 @@
                 @Posts[i].Title
             </a>
         </div>
-        <div>
+        <div class="last_news_descr">
             @Html.Raw(Posts[i].Description)
         </div>
         <div class="clear"></div>
-        <a href="List/News/@Posts[i].Id" class="last_news_more" style="margin-top: 20px;">подробнее...</a>
+
+
+        <a href="List/News/@Posts[i].Id" class="last_news_more" style="margin-top: 20px; background: #1E9345; ">подробнее...</a>
         <div class="clear"></div>
     </div>
     }
