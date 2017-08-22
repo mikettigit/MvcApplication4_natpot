@@ -48,6 +48,10 @@ namespace MvcApplication4_natpot.Controllers
             {
                 ViewData["Post"] = Dm.GetItem("1596");
             }
+            if (param1.ToLower() == "gates.cshtml")
+            {
+                ViewData["Post"] = Dm.GetItem("1865");
+            }
 
             string ViewFileName = "~/Views/Pages/" + param1;
 
