@@ -9,12 +9,13 @@
 	    height: 127px;
 	}
 
-	.logo_company {
-	    left: 201px;
-	    top: 290px;
-	    width: 101px;
-	    height: 68px;
-	}
+    .logo_company {
+        left: 238px;
+        top: 300px;
+        width: 75px;
+        height: 50px;
+    }
+
 	.logo_img {
 	    width: 96%;
 	    height: 100%;
@@ -42,11 +43,11 @@
 	}
 
 	.logo_company {
-	    left: 171px;
-	    top: 249px;
-	    width: 88px;
-	    height: 68px;
-	}
+        left: 205px;
+        top: 258px;
+        width: 60px;
+        height: 40px;
+    }
 
 	.logo_img {
 	    width: 96%;
@@ -80,12 +81,12 @@
 	}
 
 	.logo_company {
-	    left: 142px;
-	    top: 207px;
-	    width: 74px;
-	    height: 50px;
-	    border: 2px inset #7b7b7b;
-	}
+        left: 171px;
+        top: 215px;
+        width: 50px;
+        height: 32px;
+        border: 2px inset #7b7b7b;
+    }
 
 	.logo_img {
 	    width: 96%;
@@ -119,12 +120,12 @@
 	}
 
 	.logo_company {
-	    left: 115px;
-	    top: 168px;
-	    width: 56px;
-	    height: 36px;
-	    border: 2px inset #7b7b7b;
-	}
+        left: 137px;
+        top: 172px;
+        width: 40px;
+        height: 26px;
+        border: 2px inset #7b7b7b;
+    }
 
 	.logo_img {
 	    width: 96%;
@@ -156,13 +157,13 @@
 	    height: 56px;
 	}
 
-	.logo_company {
-	    left: 87px;
-	    top: 126px;
-	    width: 41px;
-	    height: 26px;
-	    border: 1px inset #7b7b7b;
-	}
+    .logo_company {
+        left: 103px;
+        top: 129px;
+        width: 30px;
+        height: 18px;
+        border: 1px inset #7b7b7b;
+    }
 	
 	.logo_img {
 	    width: 96%;

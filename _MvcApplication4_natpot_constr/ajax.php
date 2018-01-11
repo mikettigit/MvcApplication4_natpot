@@ -43,12 +43,12 @@ if($func == 'get_zam'){
 	$mail = new PHPMailer();
 	$mail->IsHTML(true);
 	$mail->CharSet = 'utf-8';
-	$mail->From = 'info@lplive.ru';
+	$mail->From = 'info@natpotolki.ru';
 
-	$mail->FromName = 'constructor.lplive.ru';
+	$mail->FromName = 'constructor';
 	$mail->Subject = 'Новая заявка на вызов замерщика';
 	
-	$adressats = ['fire73.ru@yandex.ru'];
+	$adressats = ['Oblako-51@yandex.ru'];
 
 	foreach ($adressats as $key => $smail) {
 		$mail->AddAddress($smail);

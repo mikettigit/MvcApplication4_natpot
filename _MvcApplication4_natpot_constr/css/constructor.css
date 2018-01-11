@@ -421,16 +421,16 @@ label.m_cel_el {
 
 .logo_company {
     position: absolute;
-    width: 102px;
-    height: 77px;
+    width: 100px;
+    height: 70px;
     z-index: 0;
     background-size: contain;
     background-position: center;
     left: 318px;
     background-repeat: no-repeat;
-    background-color: #FFFFFF;
-    top: 403px;
-}
+    background-color: #50a9e7;
+    top: 400px;
+ background-image: url(../construct/logo2.png); background-size:cover;}
 
 .logo_img {
     background-image: url(../construct/logo2.png);

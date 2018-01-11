@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -342,8 +342,7 @@
                                     </div>
                                     <div class="svg_meb"><?php include "construct/int/2/meb.svg"; ?></div>
                                     <div class="logo_company">
-                                        <!--<div class="logo_img"></div>-->
-                                        <!-- <div class="logo_sliders">
+                                        <!--<div class="logo_img"></div>-->                            <!-- <div class="logo_sliders">
                                             
                                             <div>
                                                 <div class="ls_item" style="background-image: url(construct/bg/1.jpg)"></div>
@@ -370,10 +369,10 @@
 
 
                                         </div>  -->
-                                        <div class="logo_info">
+                                        <!--<div class="logo_info">
                                             Ваш <br>логотип
                                         </div>
-                                        <!--<div class="logo_overlay"></div>   -->
+ -->                                       <!--<div class="logo_overlay"></div>   -->
                                     </div>
                                     <div class="controlls_btn">
                                         
@@ -622,7 +621,7 @@
     <script src="libs/modals/modals.js"></script>
     <script src="libs/input_mask/js/jquery.inputmask.js"></script>
     <script src="js/construct.js"></script>
-
+ <script src="js/iframeResizer.contentWindow.min.js"></script>
 
     <!-- <script src="libs/modals/modals.js"></script>
     <script src="libs/ajax/ajax.js"></script>
