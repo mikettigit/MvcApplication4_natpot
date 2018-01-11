@@ -1,0 +1,32 @@
+.int_2 .int{
+	background-image: url("../../construct/int/2/int.png");
+}
+
+.int_2 .logo_company {
+    left: 321px;
+    top: 404px;
+    width: 97px;
+    border: none;
+    height: 65px;
+}
+.int_2 .logo_company .logo_img {
+    width: 95%;
+    height: 95%;
+}
+
+
+.int_2 .logo_company .logo_overlay {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.22);
+    width: 102%;
+    height: 100%;
+    left: -1px;
+    top: 0;
+}
+
+.int_2 .video_bg {
+    height: 176px;
+}
+
+
+

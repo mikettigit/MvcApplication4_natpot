@@ -1,0 +1,554 @@
+.clear::after {
+  clear: both;
+  content: "";
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+
+
+
+.fl_el{
+  position: relative;
+  min-height: 1px;
+}
+
+.fl-5{
+  width: 5%;
+}
+.fl-10{
+  width: 10%;
+}
+.fl-15{
+  width: 15%;
+}
+.fl-20{
+  width: 20%;
+}
+.fl-25{
+  width: 25%;
+}
+.fl-30{
+  width: 30%;
+}
+.fl-35{
+  width: 35%;
+}
+.fl-40{
+  width: 40%;
+}
+.fl-45{
+  width: 45%;
+}
+.fl-50{
+  width: 50%;
+}
+.fl-55{
+  width: 55%;
+}
+.fl-60{
+  width: 60%;
+}
+.fl-65{
+  width: 65%;
+}
+.fl-70{
+  width: 70%;
+}
+.fl-75{
+  width: 75%;
+}
+.fl-80{
+  width: 80%;
+}
+.fl-85{
+  width: 85%;
+}
+.fl-90{
+  width: 90%;
+}
+.fl-95{
+  width: 95%;
+}
+.fl-100{
+  width: 100%;
+}
+
+
+.flex_box_center > div,
+.flex_box_start > div
+ {
+    position: relative;
+    min-height: 1px;
+}
+.flex_box_center   {
+  display: flex;
+  justify-content: center;
+}
+.flex_box_start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.construct_box {
+  height: 587px;
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+}
+
+.int {
+  background-image: url("../construct/int/2/int.png");
+  /*background-image: url("../construct/interier1-min.png");*/
+  background-size: 100% auto;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.celling {
+  background-image: url("../construct/celling/1/g.png");
+  background-size: 100% auto;
+  height: 173px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.celling_layer {
+  display: none;
+  left: 1px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.show_layer {
+  display: block;
+}
+
+
+
+.svg_meb {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.svg_wall {
+  background-color: rgb(153, 154, 101);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.svg_celling {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.color_meb {
+  fill: rgb(186, 136, 44);
+}
+
+
+
+.controolls {
+  padding: 0 21px;
+  text-align: center;
+}
+
+.celling_color{
+  display: none;
+  fill: rgb(191, 203, 87);
+}
+
+.level_1{
+  fill: rgb(177, 194, 56);
+  transition-duration: 0.3s;
+}
+
+
+.level_2{
+  fill: rgb(239, 223, 174);
+  transition-duration: 0.3s;
+}
+
+.light {
+  background-image: url("../construct/celling/1/svet.png");
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition-duration: 0.3s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 12;
+}
+
+.light_l {
+  background-size: cover;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition-duration: 0.3s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 12;
+}
+
+.show_light{
+  visibility: visible;
+  opacity: 1;
+}
+
+.f_cel_el {
+  border: 1px solid;
+  border-radius: 7px;
+  cursor: pointer;
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  margin: 2px;
+  text-align: center;
+  transition-duration: 0.3s;
+  width: 60px;
+}
+
+.f_cel_el {
+  border: 1px solid rgb(147, 147, 147);
+  border-radius: 7px;
+  color: rgb(33, 55, 211);
+  cursor: pointer;
+  display: inline-block;
+  height: 43px;
+  line-height: 44px;
+  margin: 5px;
+  text-align: center;
+  transition-duration: 0.3s;
+  width: 79px;
+}
+
+.f_cel_el.active_form {
+  background-color: rgb(193, 200, 252);
+}
+
+.left_controll {
+  width: 350px;
+}
+
+
+.controolls button {
+  background: rgb(232, 190, 117) none repeat scroll 0 0;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  height: 50px;
+  margin-bottom: 3px;
+  padding: 3px 7px;
+  width: 264px;
+}
+
+#s_c h3 {
+  font-family: "PT Sans";
+  font-size: 22px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+
+.color_picker {
+  display: inline-block;
+}
+
+.c_center .fl-25 {
+  text-align: center;
+}
+
+#s_c select {
+  border: 1px none;
+  padding: 5px;
+}
+
+.formbutton.but_send_construct {
+  padding: 0;
+}
+
+.form_celling {
+  margin: 53px auto 0;
+  width: 325px;
+}
+
+.form_celling h2 {
+  font-family: "PT Sans";
+  font-size: 27px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+
+.m_cel_el {
+  border: 1px solid rgb(147, 147, 147);
+  border-radius: 7px;
+  color: rgb(33, 55, 211);
+  cursor: pointer;
+  display: inline-block;
+  height: 43px;
+  line-height: 44px;
+  margin: 5px;
+  text-align: center;
+  transition-duration: 0.3s;
+  width: 79px;
+}
+
+.m_cel_el.active_m {
+  background-color: rgb(193, 200, 252);
+}
+
+/*
+show_layer
+
+*/
+
+.inputstyle.no_validation {
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.flex_box_center .fl-25 {
+  text-align: center;
+}
+
+.title_construct {
+  color: rgb(104, 86, 53);
+  font-family: "PT Serif Caption";
+  font-size: 34px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.color_el {
+  cursor: pointer;
+  display: inline-block;
+  margin: 2px;
+  position: relative;
+  transition-duration: 0.3s;
+  width: 40px;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+.color_pic {
+  display: block;
+  width: 100%;
+  height: 20px;
+  transition-duration: 0.3s;
+}
+
+.color_el:hover .color_pic {
+  transform: scale(1.1);
+}
+
+.color_el:hover {
+  border: 1px solid gray;
+}
+.color_el.active {
+  border: 1px solid gray;
+}
+
+
+.colors_grid {
+  margin: 0;
+  max-height: 274px;
+  overflow: auto;
+  padding: 0;
+  text-align: left;
+}
+
+
+.color_title {
+  font-family: "PT Sans";
+  font-size: 12px;
+  text-align: center;
+}
+
+.colors_group{
+  display: none;
+}
+
+.show_colors {
+  display: block;
+}
+
+.c_row > h3 {
+  text-align: left !important;
+}
+
+.material_select {
+  font-family: "PT Sans";
+  cursor: pointer;
+}
+
+label.m_cel_el {
+  border: medium none;
+  border-radius: 0;
+  color: inherit;
+  font-family: "PT Sans";
+  height: auto;
+  margin: 0;
+  padding: 0 6px;
+  width: auto;
+}
+
+.logo_company {
+    position: absolute;
+    width: 102px;
+    height: 77px;
+    z-index: 0;
+    background-size: contain;
+    background-position: center;
+    left: 318px;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    top: 403px;
+}
+
+.logo_img {
+    background-image: url(../construct/logo2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 118px;
+    height: 88px;
+}
+
+
+
+.logo_overlay {
+    position: absolute;
+    background-color: rgba(33, 33, 33, 0.04);
+    width: 110%;
+    height: 112%;
+    left: -6px;
+    top: -4px;
+    transform: rotateX(0deg) rotateY(-11deg) rotateZ(0deg) skew(0.5deg);
+    border: 5px inset #a9a9a9;
+    z-index: 1;
+}
+
+
+.controlls_btn {
+    position: absolute;
+    z-index: 15;
+    bottom: 10px;
+    right: 20px;
+}
+
+.controlls_btn .btn {
+    position: relative;
+    display: block;
+    margin: 10px 0;
+}
+
+.form-group.required::before {
+    content: "*";
+    position: absolute;
+    left: -14px;
+    color: red;
+}
+
+.form-small {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nv_msg {
+    font-size: 11px;
+    text-align: center;
+    color: red;
+}
+
+.color_el.active {
+    border: 1px solid gray;
+}
+
+.video_bg {
+    position: absolute;
+    width: 234px;
+    left: 349px;
+    top: 217px;
+    height: 235px;
+    overflow: hidden;
+}
+
+
+.covervid-video2 {
+    position: absolute;
+    width: 417px;
+}
+
+.photo_item {
+    float: left;
+    width: 90px;
+    height: 60px;
+    background-size: cover;
+    margin: 10px 2px;
+    box-shadow: -3px 1px 7px 0px rgba(173, 173, 173, 0.84);
+    cursor: pointer;
+}
+
+.construct_main_box {
+  margin-top: 20px;
+}
+
+
+
+
+
+/*.stl_1 {
+  fill: url("#bg_test");
+}
+
+*/
+
+.btn_open_modal_zam {
+  /*  background-color: #b30a0a;
+    transition-duration: 0.3s;
+    border: none;*/
+}
+
+
+.presset_item {
+    width: 200px;
+    height: 125px;
+    background-size: 100%;
+    float: left;
+    margin: 10px 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    background-position: center top;
+}
+
+.presset_item:hover{
+  background-size: 120%;
+}

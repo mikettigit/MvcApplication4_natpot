@@ -1,0 +1,19 @@
+.controlls_int {
+	float: left;
+	margin-left: 5px;
+}
+
+.construct_box {
+	float: left;
+}
+
+.ls_item {
+    width: 132px;
+    height: 89px;
+    background-size: cover;
+}
+
+.logo_sliders {
+	width: 100%;
+}
+

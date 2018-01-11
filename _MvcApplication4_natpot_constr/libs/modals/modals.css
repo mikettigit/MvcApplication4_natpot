@@ -1,0 +1,163 @@
+body.modals_active {
+  overflow: hidden;
+}
+
+.modals {
+  background-color: rgba(0, 0, 0, 0.48);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  transition-duration: 0.3s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 51;
+}
+
+.modal_back {
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition-duration: 0.3s;
+  width: 100%;
+}
+
+.modal_box {
+  background-color: rgb(255, 255, 255);
+  margin: 20px auto;
+  min-height: 100px;
+  max-width: 500px;
+  min-width: 300px;
+  width: 90%;
+  position: relative;
+  transition-duration: 0.3s;
+  visibility: hidden;
+  box-sizing: border-box;
+}
+
+.modals_active .this_page {
+  -webkit-filter: blur(5px);
+     -moz-filter: blur(5px);
+       -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+          filter: blur(5px);
+}
+
+/*effects*/
+
+.an-down .modal_box {
+  opacity: 0;
+  transform: translateY(-500px);
+}
+.an-down.show_modal .modal_box{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/*effects*/
+
+
+
+.show_modal .modal_box{
+  visibility: visible;
+}
+
+.modals.show_modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.close_modal {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  font-size: 20px;
+  opacity: 0.6;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  transition-duration: 0.3s;
+}
+
+.close_modal:hover {
+  opacity: 1;
+}
+
+
+.modal_box {
+  padding: 25px;
+  /*text-align: center;*/
+}
+
+.modal_title {
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.modal_title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: 1px;
+    background-color: #bdbdbd;
+    left: 50%;
+    margin-left: -30%;
+}
+
+/*.form {
+  margin: 0 auto;
+  max-width: 340px;
+  text-align: left;
+}*/
+
+.field_project {
+  border-radius: 0;
+  font-size: 14px;
+  height: auto;
+  padding: 12px;
+  transition-duration: 0.3s !important;
+}
+
+.field_project:focus {
+    background-color: rgb(251, 251, 251);
+    border-color: rgba(0, 0, 0, 0.8);
+    box-shadow: none;
+    transition-duration: 0.3s !important;
+}
+
+.btn-flat {
+  border-radius: 0;
+  display: block;
+  font-size: 15px;
+  margin: 0 auto;
+  outline: medium none !important;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.nvc_msg {
+    color: rgb(226, 11, 11);
+    font-size: smaller;
+    text-transform: lowercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
