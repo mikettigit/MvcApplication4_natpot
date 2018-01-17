@@ -1,4 +1,24 @@
-﻿html {
+﻿
+html {
+	background: url('/Content/img/template/back/background_photo.jpg') #000 46% 0% !important;
+	background-attachment: fixed !important;
+}
+.main_block_wrapper {
+	background: none !important;
+}
+.header_logo img {
+	margin-left: 0px !important;
+}
+.header_logo>span {
+	float: right !important;
+}
+.header_compname {
+	margin-right: 0px !important;
+	text-align: right !important;
+	text-shadow: 1px !important;
+}
+
+html {
   background: url('/Content/img/template/background.jpg') #000 center top;
   background: /*url('/Content/img/template/background_star_1.png'),
               url('/Content/img/template/background_star_2.png'),
@@ -36,6 +56,7 @@ margin-bottom: 15px;
 
 /* Шапка сайта */
 .header {
+  background: rgba(153, 153, 153, 0.41);
   height: 145px;
 /*  line-height: 145px;*/
 }
@@ -52,16 +73,9 @@ margin-bottom: 15px;
 .header_compname,
 .header_phone {
   /*color: #FFED00;*/
-  color: white;
+  color: #ffffff;
   font-family: Arial, sans-serif;
-  text-shadow: 2px 0 #000,
-               2px 2px #000,
-               0 2px #000,
-               -2px 2px #000,
-               -2px 0 #000,
-               -2px -2px #000,
-               0 -2px #000,
-               2px -2px #000;
+  text-shadow: 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000, -1px -1px #000, 0 -1px #000, 1px -1px #000;
   letter-spacing: 2px;
 }
 .header_phone {
@@ -98,18 +112,17 @@ margin-bottom: 15px;
   position: relative;
 }
 .main_menu a {
-  background: #31A657;
-  background: -webkit-linear-gradient(#31A657, #017427);
-  background: linear-gradient(#31A657, #017427);
+  background: #d6d6d6;
+  /* background: -webkit-linear-gradient(#31A657, #017427); */
+  /* background: linear-gradient(#31A657, #017427); */
   /*-pie-background: linear-gradient(#31A657, #017427);*/
   behavior: url(/natpotolki.ru/js/PIE.htc);
-  border-left: 1px solid #42A663;
-  border-right: 1px solid #076F29;
-  color: #FFF;
+  /* border-left: 1px solid black; */
+  border-right: 1px solid black;
+  color: #000;
   display: block;
   position: relative;
   text-align: center;
-
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -119,11 +132,12 @@ margin-bottom: 15px;
 }
 .main_menu a.selected,
 .main_menu a:hover {
-  background: #FFF45F;
-  background: -webkit-linear-gradient(#FFF45F, #BAA201);
-  background: linear-gradient(#FFF45F, #BAA201);
-  border-left: 1px solid #CAB220;
-  border-right: 1px solid #CAB220;
+  font-weight: bold;
+  /* background: #a9d3f7; */
+  /* background: -webkit-linear-gradient(#FFF45F, #BAA201); */
+  /* background: linear-gradient(#FFF45F, #BAA201); */
+  /* border-left: 1px solid #CAB220; */
+  /* border-right: 1px solid #CAB220; */
   /*-pie-background: linear-gradient(#FFF45F, #BAA201);*/
   color: #111;
 }
@@ -241,8 +255,9 @@ margin-bottom: 15px;
   z-index: 10;
 }
 .content_submenu {
-  color: #FFF;
-  background: url('/Content/img/template/background_texture.png') #000;
+  color: #000;
+  /*background: url('/Content/img/template/background_texture.png') #000;*/
+  background: linear-gradient(#31A657, #017427);
   font-size: 14px;
   position: relative;
   text-transform: uppercase;
@@ -268,8 +283,10 @@ margin-bottom: 15px;
 }
 .content_submenu a.selected,
 .content_submenu a:hover {
-  background: #1E9345;
-  background: rgba(30,220,69,0.6);
+  /*background: #1E9345;
+  background: rgba(30,220,69,0.6);*/
+  color: #111;
+  font-weight: bold;
 }
 .content_submenu a:first-of-type {
   border-top: none;

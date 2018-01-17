@@ -2,6 +2,8 @@ jQuery(function($) {
 
 $(document).ready(function(){
 
+    
+
 	$('.cp_meb').farbtastic(function(color){
 		// $('#wall1').css('fill',color);
 		// //$('.wall').css('fill',color);
@@ -29,6 +31,7 @@ $(document).ready(function(){
 
 
 		$(this).addClass('active');
+
 	});
 
 	// $('.cp_celling_1').farbtastic(function(color){
@@ -586,6 +589,7 @@ $(document).ready(function(){
 		modals_show('modal_order');
 	});
 
+	$("[presset_id = '3']").click();
 
 }); //ready
 

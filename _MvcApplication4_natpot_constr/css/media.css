@@ -1,3 +1,10 @@
+@media screen and (max-width: 1257px) {
+    .construct_main_box .b_color_int, .construct_main_box .controlls_int > .text-center {
+        display:inline-block;
+    }
+}
+
+
 @media screen and (max-width: 992px) {
 
 	.construct_box {
