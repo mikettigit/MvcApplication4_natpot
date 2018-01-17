@@ -258,6 +258,7 @@ margin-bottom: 15px;
   color: #000;
   /*background: url('/Content/img/template/background_texture.png') #000;*/
   background: linear-gradient(#31A657, #017427);
+  background: rgba(153, 153, 153, 0.16);
   font-size: 14px;
   position: relative;
   text-transform: uppercase;
