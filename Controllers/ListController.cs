@@ -57,6 +57,10 @@ namespace MvcApplication4_natpot.Controllers
                 {
                     return View("ListFeedback");
                 }
+                else if (param1.ToLower() == "discounts")
+                {
+                    return View("ListDiscounts");
+                }
 
                 return View();
             }
