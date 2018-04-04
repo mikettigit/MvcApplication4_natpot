@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace MvcApplication4_natpot
+namespace MvcApplication3
 {
     public static class WebApiConfig
     {

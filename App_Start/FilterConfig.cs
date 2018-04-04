@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace MvcApplication4_natpot
+namespace MvcApplication3
 {
     public class FilterConfig
     {
