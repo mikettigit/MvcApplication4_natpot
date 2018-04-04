@@ -5,7 +5,7 @@ using System.Web;
 using System.Threading;
 using System.Web.SessionState;
 
-namespace MvcApplication4_natpot.Helpers
+namespace ElitaCompany.Helpers
 {
     public class SessionManager
     {

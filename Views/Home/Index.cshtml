@@ -1,106 +1,102 @@
-﻿@using MvcApplication4_natpot.Models
+﻿@using MvcApplication3.Models
 @{
-    Post Post = (Post)ViewData["Post"];
-    List<Post> Posts = (List<Post>)ViewData["Posts"];
-    ViewBag.Title = "Натяжные потолки Мурманск - «Облако»";
-	ViewBag.MetaKeywords = "натяжные потолки, натяжные потолки Мурманск, натяжные потолки облако, натяжные потолки небо, натяжной потолок небо с облаками, натяжной потолок звездное небо, потолки натяжные фотопечать облака, натяжные потолки облака фото, натяжной потолок облака цена";
-    ViewBag.MetaDescription = "Наша компания предлагает натяжные потолки для офисных и жилых помещений из пленки ведущих мировых производителей!";
-    Layout = "~/Views/Shared/SiteLayout.cshtml";
+    ViewBag.Title = "Index";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/SiteLayout.cshtml";
 }
 
-<article class="article clearfix">
-    @if (Post != null)
-    {
-    @Html.Raw(Post.Content)
-    }
-    else {
-    <h1 class="a_title">Натяжные потолки - это просто!</h1>
+<div class="content_body">
+    <div class="OnlyText">
 
-    <div class="a_photos_wrapper clearfix">
-        <div class="a_photos carousel">
-            <ul class="">
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/1234_bus_cinema.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1234_bus_cinema.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/2_89ebaabaad15.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1_89ebaabaad15.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/2_e883ed78ef1a.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1_e883ed78ef1a.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/2_5f3d9e95c516.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1_5f3d9e95c516.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/2_e180a2f92e16.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1_e180a2f92e16.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/2_20f773a0796a.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1_20f773a0796a.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/2_a675c039f002.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1_a675c039f002.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/2_31714c60ad07.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1_31714c60ad07.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/2_25625155fde1.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/1_25625155fde1.jpg" alt="Натяжные потолки"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/perf.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/perf.jpg" alt="Натяжные потолки" style="width:149px; height:103px;"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/carusel1.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/carusel1.jpg" alt="Натяжные потолки" style="width:149px; height:103px;"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/carusel2.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/carusel2.jpg" alt="Натяжные потолки" style="width:149px; height:103px;"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/carusel3.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/carusel3.jpg" alt="Натяжные потолки" style="width:149px; height:103px;"></a></li>
-                <li><a class="coolimage a_photos_link" href="/Content/img/images/carusel4.jpg" rel="article_photos_gallery" title="Натяжные потолки"><img class="a_photos_photo" src="/Content/img/images/carusel4.jpg" alt="Натяжные потолки" style="width:149px; height:103px;"></a></li>
-            </ul>
-        </div>
-        <div class="a_photos_buttons">
-            <button id="a_photos_next" class="a_photos_next">></button>
-            <button id="a_photos_prev" class="a_photos_prev"><</button>
-        </div>
-    </div>
-
-
-    <div class="a_body clearfix">
-        <p><a href="/ColorRequest/"><img src="/Content/img/all/0_modulkopiya.jpg" width="600" /></a></p>
-        <p><br />КОМПАНИЯ &laquo;ЕВРО-СТРОЙ&raquo; ПРЕДЛАГАЕТ ВАШЕМУ ВНИМАНИЮ НАТЯЖНЫЕ ПОТОЛКИ ИЗ ПЛЕНКИ ПВХ ПРОИЗВОДСТВА ФРАНЦИЯ, ГЕРМАНИЯ, РОССИЯ.</p>
-        <p>Наша компания успешно работает на рынке натяжных потолков с 1995 года. Многолетний опыт работы в сфере натяжных потолков, квалифицированные специалисты,желание развиваться и совершенствоваться позволили нам наладить собственное производство, что способствовало уменьшению стоимости, сокращению сроков изготовления, доставки и монтажа потолков как внутри компании, так и для дилеров.&nbsp;<a href="/List/Discounts">Поэтому мы регулярно проводим акции и дарим нашим клиентам скидки и бонусы.</a></p>
-        <p>Натяжные потолки получают все большее распространение благодаря своим функциональным качествам:</p>
-        <ul>
-            <li>быстрота установки, (может устанавливаться в любых помещениях всего за несколько часов);</li>
-            <li>отсутствие строительного мусора (шпатлевка, штукатурка, побелка и т.д.);</li>
-            <li>не пропускают воду при протечке с верхнего этажа, собирая ее в полотне потолка, оставляя практически неповрежденными обои, паркет, ламинат, ковровые покрытия;</li>
-            <li>возможность изменения интерьера помещения в течение одного рабочего дня;</li>
-            <li>на материале потолка не образуется конденсат;</li>
-            <li>просты в уходе (протираются влажной мягкой тканью).</li>
-        </ul>
-        <p>Применение различных способов освещения (расположение светильников, виды светильников: люстры,бра,точечные светильники, торшеры т.д.), фотопечать (нанесение практически любого рисунка на полотно потолка), комбинирование различных материалов (гипсокартоновая конструкция и натяжной потолок) - все это сделает Ваше помещение неповторимым и особенным. А дизайнерские проекты наших специалистов помогут Вам в этом.</p>
+        <h2 style="padding-top:20px;">О компании</h2>
         <p>
-            <object width="320" height="240" data="/Content/tiny_mce/plugins/media/moxieplayer.swf" type="application/x-shockwave-flash">
-                <param name="src" value="/Content/tiny_mce/plugins/media/moxieplayer.swf" />
-                <param name="flashvars" value="url=/content/img/all/2_montazh.flv&amp;poster=/admin/" />
-                <param name="allowfullscreen" value="true" />
-                <param name="allowscriptaccess" value="true" />
-            </object>
+            @*<span class="button measurementAsk" _system="www">Записаться на замер</span>*@
+            "Облако" - завод по производству и установке натяжных потолков, жалюзи, роллет.<br /><br />
+            Завод "Облако" работает для индивидуальных заказчиков, дилеров Мурманска и Мурманской области и приглашает к сотрудничеству все заинтересованные организации.<br /><br />
+            16 лет мы делаем комфортнее и уютнее ваш дом!
         </p>
+
+        <p style="text-align:center; margin-bottom:20px;">
+            <iframe allowfullscreen height=500 src=https://www.youtube-nocookie.com/embed/qY1q703TYsg width="100%"></iframe>
+        </p>
+
+        <p style="text-align:justify;">
+            Современное автоматическое оборудование, расширенный ассортимент комплектующих и возможность их оптовой закупки, срочное изготовление натяжных потолков и жалюзи - это лишь несколько факторов высокотехнологичного производства.
+        </p>
+        <h4>Для вашего отличного настроения завод "Облако" предлагает:</h4>
+
+        <table border="0" width="100%" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td width="50%">
+                        <ul>
+                            <li>Cрочное изготовление потолка в течение 1 часа,</li>
+                            <li>Слаженную работу коллектива,</li>
+                            <li>Заводские цены,</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Сертифицированные пленки,</li>
+                            <li>Акции. Бонусы по вашему выбору,</li>
+                            <li>Гарантийное и постгарантийное обслуживание.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    }
-</article>
-
-<div class="last_news_title">Новости компании</div>
-<div>
-    <script>
-        function proportion(newsboxes) {
-            var maxheigth = 0;
-            for (var i = 0; i < newsboxes.length; i++) {
-                if ($(newsboxes[i]).height() > maxheigth) {
-                    maxheigth = $(newsboxes[i]).height();
-                }
-            }
-            newsboxes.height(maxheigth);
-        }
-        $(document).ready(function(){
-            proportion($(".last_news.clearfix .last_news_title"));
-            proportion($(".last_news.clearfix .last_news_descr"));
-        })
-    </script>
-    @for (var i = 0; i < Math.Min(3, Posts.Count); i++) { 
-    <div class="last_news clearfix">
-        <div class="last_news_title">
-            <a href="/List/News/@Posts[i].Id">
-                <span class="last_news_date">@Posts[i].Date.ToString("dd.MM.yyyy")</span>
-                @Posts[i].Title
-            </a>
-        </div>
-        <div class="last_news_descr">
-            @Html.Raw(Posts[i].Description)
-        </div>
-        <div class="clear"></div>
-
-
-        <a href="List/News/@Posts[i].Id" class="last_news_more" style="margin-top: 20px; background: #1E9345; ">подробнее...</a>
-        <div class="clear"></div>
-    </div>
-    }
 </div>
+
+<div class="banner2"></div>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">Экскурсии</h2>
+        <p style="text-align:justify;">
+            Завод «Облако», производственная компания «Евро-Строй» поддерживают традиции профессионального ориентирования школьников и проводят <a href="https://vk.com/albums-32864631" target="_blank">экскурсии</a> на производство.
+        </p>
+        <p>
+            Наши гости – учащиеся мурманских школ и гимназий.
+        </p>
+        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            <div><img src="/Content/themes/ictec/images/gallery/excursions/1.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/excursions/2.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/excursions/3.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/excursions/4.jpg" alt="" /></div>
+        </div>
+    </div>
+</div>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">Семинары</h2>
+        <p style="text-align:justify;">
+            Совершенствуясь сами, мы помогаем овладевать секретами мастерства, желающим повысить свой профессиональный уровень. Семинары и рабочие встречи стали традиционными.
+        </p>
+        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            <div><img src="/Content/themes/ictec/images/gallery/seminars/1.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/seminars/2.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/seminars/3.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/seminars/4.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/seminars/5.jpg" alt="" /></div>
+        </div>
+    </div>
+</div>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?152"></script>
+        <!-- VK Widget -->
+        <div id="vk_groups"></div>
+        <script type="text/javascript">
+            VK.Widgets.Group("vk_groups", { mode: 3, width: "auto" }, 32864631);
+        </script>
+    </div>
+</div>
+
+<div class="content_body">
+    @Html.Partial("ContactsBlock")
+</div>
+
+
+<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=5ZPSIHkH223NHzsLY7KUIr4yedi7drrI&height=350"></script>

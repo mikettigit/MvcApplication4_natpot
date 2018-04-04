@@ -8,7 +8,7 @@ using System.IO;
 using System.Text;
 using System.Xml;
 
-namespace MvcApplication4_natpot.Models
+namespace MvcApplication3.Models
 {
     public class DataModel:IDisposable
     {
@@ -158,8 +158,8 @@ namespace MvcApplication4_natpot.Models
                             result.Date = Convert.ToDateTime(NodeDate.InnerText);
                         }
                         catch
-                        {
-                            result.Date = DateTime.Now;
+                        { 
+                            result.Date = DateTime.Now; 
                         }
                     }
 
@@ -177,24 +177,6 @@ namespace MvcApplication4_natpot.Models
                         {
                             result.Content = result.Description;
                         }
-                    }
-
-                    XmlNode NodeMetaDescription = Node.SelectSingleNode("meta_decription");
-                    if (NodeMetaDescription != null)
-                    {
-                        result.Meta_Description = NodeMetaDescription.InnerText;
-                    }
-
-                    XmlNode NodeMetaKeywords = Node.SelectSingleNode("meta_keywords");
-                    if (NodeMetaKeywords != null)
-                    {
-                        result.Meta_Keywords = NodeMetaKeywords.InnerText;
-                    }
-
-                    XmlNode NodeMetaTitle = Node.SelectSingleNode("meta_title");
-                    if (NodeMetaTitle != null)
-                    {
-                        result.Meta_Title = NodeMetaTitle.InnerText;
                     }
                 }
             }

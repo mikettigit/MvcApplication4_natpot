@@ -1,0 +1,39 @@
+﻿@using MvcApplication3.Controllers;
+
+@{
+    var CurrentPage = (Pages)Model;
+}
+
+@*@if (CurrentPage == Pages.Ceilings)
+{
+    <a href="/Blog/Item/1941" style="text-decoration:none !important;">
+        <div class="banner" style="color: #3d5861; padding-left: 150px; background-image: url(/content/themes/ictec/images/bg/ceilings3.jpg); height:350px; ">
+            <div class="content_body">
+                <h1 style="display: inline-block;">
+                    Потолки стрейч!
+                </h1>
+                <ul style=" text-align: left; display: inline-block; " class="hidden-xs hidden-sm visible-md visible-lg">
+                    <li><strong>Уникальное предложение 2018 года</strong>
+                    <li>Инновационный продукт, который запущен 13.03.2018 в производство завода "ОБЛАКО".
+                    <li>Установка при комнатной температуре 20-25 гр. без предварительного нагрева и без использования тепловой пушки и газового баллона
+                </ul>
+                <ul style=" text-align: left; display: inline-block; " class="visible-xs visible-sm hidden-md hidden-lg">
+                    <li><strong>Уникальное предложение 2018 года</strong>
+                    <li>Инновационный продукт, который запущен 13.03.2018 в производство завода "ОБЛАКО".
+                </ul>
+            </div>
+        </div>
+    </a>
+}
+else
+{*@
+    <div class="banner">
+        <div class="banner_hover">
+            <h1 style="margin-top:150px;">
+                НАТЯЖНЫЕ ПОТОЛКИ
+                <span>ЖАЛЮЗИ, РОЛЛЕТЫ, ГАРАЖНЫЕ ВОРОТА</span>
+                <span>В МУРМАНСКЕ</span>
+            </h1>
+        </div>
+    </div>
+@*}*@

@@ -1,220 +1,202 @@
-﻿<!DOCTYPE html>
-<!--[if lte IE 8 ]><html class="ie8" lang="ru"><![endif]-->
-<!--[if IE 9 ]><html class="ie9" lang="ru"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="ru">
-<!--<![endif]-->
+﻿@using MvcApplication3.Controllers;
+<!DOCTYPE html>
+<html lang="ru-RU">
 <head>
+    <meta charset="UTF-8" />
+    <meta name='yandex-verification' content='423620bf1c4c60f8' />
 
-    <script src="/Scripts/jquery.js"></script>
-    <script src="/Scripts/jquery.cookie.js"></script>
-    <script type='text/javascript'>
-        if (location.href.toLowerCase().indexOf("nomobile") > -1) {
-            $.cookie("nomobile", true);
-        }
-        var nomobile = $.cookie("nomobile");
-        if (nomobile == null) {
-            if (window.innerWidth < 1024) {
-                //location.href = "//m.natpotolki.ru/";
-            }
-        }
-    </script>
+    <title>Натяжные потолки Мурманск - &#171;Облако&#187</title>
+    <meta name="description" content="Наша компания предлагает натяжные потолки для офисных и жилых помещений из пленки ведущих мировых производителей!">
+    <meta name="keywords" content="натяжные потолки, натяжные потолки Мурманск, натяжные потолки облако, натяжные потолки небо, натяжной потолок небо с облаками, натяжной потолок звездное небо, потолки натяжные фотопечать облака, натяжные потолки облака фото, натяжной потолок облака цена">
 
-    <title>@(String.IsNullOrEmpty(ViewBag.MetaTitle) ? ViewBag.Title : ViewBag.MetaTitle)</title>
-    <meta charset="windows-1251">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="@(String.IsNullOrEmpty(ViewBag.MetaDescription) ? "натяжные потолки Мурманск" : ViewBag.MetaDescription)">
-    <meta name="keywords" content="@(String.IsNullOrEmpty(ViewBag.MetaKeywords) ? " натяжные потолки, натяжные потолки мурманск, фотопечать на натяжных потолках, глянцевые натяжные потолки, матовые натяжные потолки, сатиновые натяжные потолки, натяжные потолки лак, натяжные потолки мат, натяжные потолки сатин, двухуровневые натяжные потолки, фотопечать на натяжных потолках, арт-печать на натяжных потолках, обвод трубы, маскировочная лента, текстурное полотно, производство натяжных потолков, производство натяжных потолков мурманск, маскировочная лента, светильники таблетки, светильники gx53, лампы gx53, энергосберегающие светильники gx53, энергосберегающие светильники gx53,энергосберегающие лампы gx53, светодиодные светильники gx53, светодиодные лампы gx53, светодиодная подсветка, дизайн-проект натяжного потолка, дизайн, дизайн потолка, дизайн натяжного потолка, дизайнер, макет потолка, пленка, пленка натяжного потолка, полотно галактика, лампы mr-16, светодиодные лампы mr-16, светодиодные светильники gu5.3, заглушка, цветная глянцевая заглушка, универсальная заглушка, заглушка tl, заглушка tlp, багет, багет невидимый, багет купить, багет для натяжного потолка купить, багет для натяжного потолка купить мурманск, обвод для труб, обвод для труб двойной, комплектующие для натяжных потолков мурманск, комплектующие для натяжных потолков, космофен, космофен клей, космофен клей мурманск, кельма, кельма монтажная, кельма для натяжных потолков, кельма купить, кельма купить мурманск, потолки ромб мурманск, роллеты, роллетные системы, рольставни, роллеты Мурманск, купить роллеты в Мурманске, производство роллет в Мурманске" : ViewBag.MetaKeywords)">
-    <meta name="google-site-verification" content="v9AKyUMaRXbctrYVEoIIl7tTgEuWPZIPGgrX2jBKeEM" />
-    <link rel="icon" href="/favicon.ico" type="image/png">
-    <link rel="stylesheet" href="/Content/Styles/normalize.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,cyrillic" />
-    <link rel="stylesheet" href="/Content/Styles/fancybox.css">
-    <link rel="stylesheet" href="/Content/Styles/styles.css">
-    <!--[if lt IE 9]><script src="/Scripts/html5shiv.js"></script><![endif]-->
+    <link rel="icon" href="/Content/themes/ictec/images/favicon.ico" type="image/ico" />
+    <link rel="stylesheet" type="text/css" media="all" href="/Content/themes/ictec/style.css" />
+    
+    <script type='text/javascript' src='/Content/themes/ictec/scripts/jquery-1.9.1.min.js'></script>
 
-    <script src="/Scripts/fancybox.js"></script>
-    <script src="/Scripts/common.js"></script>
-    <script src="/Scripts/carousel.js"></script>
+    <script src="/Content/themes/ictec/scripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="/Content/themes/ictec/scripts/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Content/themes/ictec/scripts/ictec.js"></script>
+    <script type="text/javascript" src="/Content/themes/ictec/scripts/measurement.js"></script>
+    
+    <link rel="stylesheet" type="text/css" media="all" href="/Content/themes/ictec/bootstrap.min.css" />
+    <script type="text/javascript" src="/Content/themes/ictec/scripts/bootstrap.min.js"></script>
+        
+    <link rel="stylesheet" type="text/css" href="/Content/themes/ictec/scripts/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/themes/ictec/scripts/slick/slick-theme.css" />
+    <script type="text/javascript" src="/Content/themes/ictec/scripts/slick/slick.min.js"></script>
 
-    <script>
-        $(window).load(function () {
-            $('.a_photos.carousel').Carousel({
-                rotateBy: 3,
-                visible: 'auto',
-                btnNext: '#a_photos_next',
-                btnPrev: '#a_photos_prev',
-                auto: false
-            });
-        });
-
-        var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
-            vars[key] = value;
-        });
-        if (vars["redirect"])
-        {
-            document.location.href = vars["redirect"];
-        }
-    </script>
 </head>
-<body>
-    <header class="header site_width">
-        <a href="/" class="header_logo">
-            <img src="/Content/img/template/logo.png" alt="Avalanz Евро-Строй">
-	<span style="display:inline-block; margin-top:26px; margin-left:125px;">
-            <span class="header_compname" style="text-align: center; display: block; font-size:12px;">Производственная компания</span>
-            <span class="header_compname" style="text-align: center; display: block; font-size:38px;">Натяжные потолки</span>
-            <span class="header_compname" style="text-align: center; display: block; font-size:18px;">жалюзи, роллеты, гаражные ворота</span>
-	</span>
-        </a>
-    </header>
-    <div class="main_block_wrapper">
-        <div class="main_block site_width">
-
-            @Html.Partial("Controls/MainMenu")    
-
-            <div class="content">
-
-                <div class="content_left">
-                    @Html.Partial("Controls/LeftMenu")
-                    <p></p>
-                    <table border="0" align="center">
-                        <tbody>
-                            <tr>
-                                <td colspan="3">
-                                    <p>
-                                        <a href="#" class="coolimage measurementAsk" rel="article">
-                                            <img src="/Content/img/all/0_1__1_.png" width="185" style="vertical-align: middle;" />
-                                        </a>
-                                    </p>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
-                                    <p></p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align:center;"><a href="https://vk.com/natyaznie_potolki_murmansk" target="_blank"><img src="/Content/img/all/logo_vk.png" alt="Официальная группа Вконтакте" title="Официальная группа Вконтакте" width="50" style="float: left;" /></a></td>
-                                <td><a href="https://www.youtube.com/user/potolkievrostroi" target="_blank"><img src="/Content/img/all/youtube_logo.png" alt="Канал Youtube" title="Канал Youtube" width="50" style="vertical-align: middle; display: block; margin-left: auto; margin-right: auto;" /></a></td>
-                                <td><a href="http://instagram.com/natpotolki_avalanz" target="_blank"><img src="/Content/img/all/logo_instagram.png" alt="Instagram" title="Instagram" width="50" style="float: right;" /></a></td>
-                            </tr>
-                            <tr>
-                                <td><img src="/Content/img/all/avalanz_logo.png" alt="Avalanz" title="Avalanz" style="margin-left:-6px;" /></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p></p>
-                    <table border="0" align="center">
-                        <tbody>
-                            <div class="content_submenu">
-                                <span>Наши партнеры</span>
-                            </div>
-                            <p></p>
-                            @*<tr>
-                                <td colspan="3">
-                                    <a href="http://www.galadekor.ru/" target="_blank"><img src="/Content/img/template/gdv.jpg" alt="Гала-Декор" style="width:185px;" /></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">
-                                    <a href="http://www.forest51.ru/" target="_blank"><img style="width: 185px; margin-top: 10px;" alt="Форест51" src="/Content/img/template/forest51.jpg"></a>
-                                </td>
-                            </tr>*@
-							<tr>
-                                <td colspan="3">
-                                    <a href="http://www.папирус51.рф/" target="_blank"><img style="width: 185px; margin-top: 10px;" alt="Папирус" src="/Content/img/template/papirus.png"></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p></p>
-                    <p></p>
-                </div>
-
-                <div class="akcia3" style="display:inline-block; margin-left:8px;">
-                    <a class="title" href="#"><img src="/Content/img/template/percent6.png"></img><span>Скидка для своих</span></a>
-                    <div class="dropdown">
-                        <div class="dropdown_content">
-                            <b>Скидка</b> предоставляется для участников группы <a href="https://vk.com/natyaznie_potolki_murmansk" target="_blank">в&nbsp;контакте</a> или при заказе с сайта
+<body id="ICTec" class="home page page-id-2 page-template page-template-home-php">
+    <div class="wrap">
+        <div class="snack">
+            <div class="content_wrap">
+                <div class="banner" style="background:  url(/Content/themes/ictec/images/sidebar.png) 0 0 repeat; height:80px;">
+                    <div class="container">
+                        <div class="logocol col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <a href="/"><img src="/Content/themes/ictec/images/evrostroy.png" style="height:80px;" alt="" /></a>
+                        </div>
+                        <div class="phonecol col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-right text-center-mob" style="">
+                            <span class="phone" style="width: 335px; padding-top:7px; float:right; ">
+                                @*<span class="description" style="color:white;">&nbsp;</span>*@
+                                <span class="number" style="color: white;">+7 (8152) 44-20-25</span>
+                                @*<span class="number">+7 (8152) 78-09-09&nbsp;</span>*@
+                                <span style="color: white; font-size: 14px; line-height: 38px; font-weight: bold;">Мурманск, ул. Буркова, 11/18</span>
+                            </span>
                         </div>
                     </div>
                 </div>
+                                
+                @{
+                    var CurrentPage = Pages.Ceilings;
+                    string path = ((((System.Web.Mvc.ControllerContext)(ViewContext)).RequestContext.HttpContext).Request).Path;
+                    if (path.ToLower().Contains("home/index"))
+                    {
+                        CurrentPage = Pages.Main;
+                    }
+                    else if (path.ToLower().Contains("price"))
+                    {
+                        CurrentPage = Pages.Price;
+                    }
+                    else if (path.ToLower().Contains("dealers"))
+                    {
+                        CurrentPage = Pages.Dealers;
+                    }
+                    else if (path.ToLower().Contains("blinds"))
+                    {
+                        CurrentPage = Pages.Blinds;
+                    }
+                    else if (path.ToLower().Contains("rollets"))
+                    {
+                        CurrentPage = Pages.Rollets;
+                    }
+                    else if (path.ToLower().Contains("pictures") || path.ToLower().Contains("videos"))
+                    {
+                        CurrentPage = Pages.Pictures;
+                    }
+                    else if (path.ToLower().Contains("blog"))
+                    {
+                        CurrentPage = Pages.Blog;
+                    }
+                    else if (path.ToLower().Contains("lights"))
+                    {
+                        CurrentPage = Pages.Lights;
+                    }
+                }
 
-                <div class="akcia3" style="display:inline-block;">
-                    <a class="title" href="#"><img src="/Content/img/template/percent10.png"></img><span>Социальная скидка</span></a>
-                    <div class="dropdown">
-                        <div class="dropdown_content">
-                            <b>Скидка</b> предоставляется пенсионерам, ветеранам ВОВ, инвалидам при предъявлении подтверждающих документов.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="akcia3" style="display:inline-block;">
-                    <a class="title" href="#"><img src="/Content/img/template/percent30.png"></img><span>Для экономных</span></a>
-                    <div class="dropdown">
-                        <div class="dropdown_content">
-                            Готовые потолки <a href="/List/Discounts/223">со скидкой 30%</a> (наличие уточняйте у менеджеров)
-                        </div>
-                    </div>
-                </div>
-
-                <div class="akcia3" style="display:inline-block;">
-                    <a class="title" href="#"><img src="/Content/img/template/percent.png"></img><span>Постоянным клиентам</span></a>
-                    <div class="dropdown">
-                        <div class="dropdown_content">
-                            при установке 2-х потолков <b>3-й</b> в подарок
-                        </div>
-                    </div>
-                </div>
-
-                @*<div style="position:absolute; left:1060px; top: 115px;">
-                    <!--https://tech.yandex.ru/share-->
-                    <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
-                    <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
-                    <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,whatsapp" data-limit="3"></div>
+                @Html.Partial("HeaderBanner", CurrentPage)
+                @*<div class="banner" style="background-color: red !important; background: radial-gradient(90% 1000%, red, black) !important; padding-left: 150px; height: 5px; background-image: none;">
                 </div>*@
+                <nav class="navbar navbar-default" style="margin-left: auto; margin-right: auto; ">
+                    @*Контейнер (определяет ширину Navbar)*@
+                    <div class="container-fluid">
+                        @*Заголовок*@
+                        <div class="navbar-header">
+                            <style>
+                                .navbar-brand {
+                                    background-color: #52a2b6;
+                                    display: none;
+                                }
+                                .navbar-brand:hover {
+                                    background-color: #337ab7 !important;
+                                }
+                            </style>
+                            <a class="navbar-brand" href='https://vk.com/natyaznie_potolki_murmansk?w=app5708398_-32864631' target='_blank' style="color: white;">ЗАПИСАТЬСЯ НА ЗАМЕР</a>
+                            @*Кнопка «Гамбургер» отображается только в мобильном виде (предназначена для открытия основного содержимого Navbar)*@
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <style>
+                            #navbar-main > ul {
+                                margin: 0 auto;
+                                display: table;
+                                table-layout: fixed;
+                                float: none;
+                            }
+                        </style>
+                        @*Основная часть меню (может содержать ссылки, формы и другие элементы)*@
+                        <div class="collapse navbar-collapse" id="navbar-main">
+
+                            <ul class="nav navbar-nav">
+                                <li class="@((CurrentPage == Pages.Main) ? "active" : "")"><a href="/Home/Index">ОБЛАКО</a></li>
+                                <li class="@((CurrentPage == Pages.Ceilings) ? "active" : "")"><a href="/Ceilings">НАТЯЖНЫЕ ПОТОЛКИ</a></li>
+                                <li class="@((CurrentPage == Pages.Blinds) ? "active" : "")"><a href="/Blinds">ЖАЛЮЗИ</a></li>
+                                <li class="@((CurrentPage == Pages.Rollets) ? "active" : "")"><a href="/Rollets">РОЛЛЕТЫ И ВОРОТА</a></li>
+                                <li class="@((CurrentPage == Pages.Lights) ? "active" : "")"><a href="/Lights">СВЕТИЛЬНИКИ И ГАРДИНЫ</a></li>
+                                <li class="@((CurrentPage == Pages.Pictures) ? "active" : "") dropdown">
+                                    <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ФОТО <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/Pictures">ЖИЛЫЕ ПОМЕЩЕНИЯ</a></li>
+                                        <li><a href="/Pictures_public">ОБЩЕСТВЕННЫЕ</a></li>
+                                        <li><a href="/Pictures_company">О КОМПАНИИ</a></li>
+                                        <li><a href="/Videos">ВИДЕО</a></li>
+                                    </ul>
+                                </li>
+                                <li class="@((CurrentPage == Pages.Price) ? "active" : "")"><a href="/Price">ЦЕНЫ</a></li>
+                                <li class="@((CurrentPage == Pages.Dealers) ? "active" : "")"><a href="/Dealers">ДИЛЕРАМ</a></li>
+                                <li class="@((CurrentPage == Pages.Blog) ? "active" : "")"><a href="/Blog">БЛОГ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
 
                 @RenderBody()
 
-                <iframe id="YandexMetrikaWrapper" src="" width="1" height="1"></iframe>
-
-                @Html.Partial("Controls/MeasurementRequestForm")
-
-                <!-- Yandex.Metrika counter -->
-                <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter24147277 = new Ya.Metrika({ id: 24147277, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24147277" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-                <!-- /Yandex.Metrika counter -->
-
-                <script>
-                    (function (i, s, o, g, r, a, m) {
-                        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                            (i[r].q = i[r].q || []).push(arguments)
-                        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-                    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-                    ga('create', 'UA-57409613-1', 'auto');
-                    ga('send', 'pageview');
-
-                    pageTracker = {};
-                    pageTracker._trackEvent = function (category, action, opt_label, opt_value) {
-                        ga('send', 'event', category, action, opt_label, opt_value, { 'nonInteraction': 1 });
-                    }
-
-                </script>
-            </div><!-- /.content -->
-        </div><!-- /.main_block -->
-    </div><!-- /.main_block_wrapper -->
-
-    <footer class="footer site_width">
-        <span class="footer_inform"><img src="/Content/img/template/adress_ico.png" alt="">Мурманск, ул. Книповича-Буркова, 18/11</span>
-        <span class="footer_inform"><img src="/Content/img/template/email_ico.png" alt="">Oblako-51@yandex.ru</span>
-        <span class="footer_inform"><img src="/Content/img/template/phone_ico.png" alt="">(8152) 44-20-25, 8921-708-20-25, 78-09-09</span>
-    </footer>
-
-    <iframe id="Preloader" src="/ColorRequest" width="1" height="1"></iframe>
-
+                <div class="container" style="padding-bottom:15px; padding-top:25px;">
+                    <div style="float: left; text-align: center; margin-bottom: 10px;" class="col-sm-4 col-xs-12">
+                        <a href="https://www.vk.com/zhalyuzi_murmansk" target="_blank" style="display: inline; margin: 0 5px 0 0; padding: 0;">
+                            <img src="/Content/themes/ictec/images/logo_vk.png" alt="Официальная группа Вконтакте" title="Официальная группа Вконтакте" width="40" />
+                        </a>
+                        <a href="https://www.youtube.com/user/potolkievrostroi" target="_blank" style="display: inline; margin: 0 0 0 5px; padding: 0; ">
+                            <img src="/Content/themes/ictec/images/youtube_logo.png" alt="Канал Youtube" title="Канал Youtube" width="40" />
+                        </a>
+                        <a href="https://www.instagram.com/oblako_51/" target="_blank" style="display: inline; margin: 0 0 0 5px; padding: 0; ">
+                            <img src="/Content/themes/ictec/images/logo_instagram.png" alt="Instagram" title="Instagram" width="40" />
+                        </a>
+                    </div>
+                    <div class="col-sm-4" style="text-align:center; margin-bottom:10px;">
+                        <strong>
+                            <span style="width:100%;">+7 (8152) 44-20-25</span><br/>
+                            <span style="width:100%;"><a href="mailto:oblako-51@yandex.ru">oblako-51@yandex.ru</a></span>
+                        </strong>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 text-right cprght" style="float:right;">
+                        <p>
+                            Завод "Облако"<br/>
+                            Производство и монтаж натяжных потолков, жалюзи, роллет в Мурманске
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .call_back {
+            -webkit-transform: rotate(-90deg); 
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            position: fixed; 
+            z-index: 999;
+            left: 0px; 
+            top: 50%; 
+            margin-left: -118px; 
+        }
+    </style>
+    <div class="call_back">
+        <a href='https://vk.com/natyaznie_potolki_murmansk?w=app5708398_-32864631' target='_blank'>
+            <span class="button measurementAsk" _system="www">Записаться на замер</span>
+        </a>
+    </div>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter24147277 = new Ya.Metrika({ id: 24147277, webvisor: true, clickmap: true, trackLinks: true, accurateTrackBounce: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/24147277" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <iframe id="YandexMetrikaWrapper" src="" width="1" height="1"></iframe>
 </body>
 </html>
+

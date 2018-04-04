@@ -1,0 +1,36 @@
+﻿@using MvcApplication3.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<style>
+    a[href*='jpg'], a[href*='png'] {
+        background: none;
+    }
+</style>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">О КОМПАНИИ</h2>
+        @{
+    var path = Server.MapPath("/Content/themes/ictec/images/gallery/pictures_company");
+    var jpgSearchPattern = new System.Text.RegularExpressions.Regex(@"$(?<=\.(jpg))", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+    var jpgnames = Directory.GetFiles(path).Where(f => jpgSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+    if (jpgnames.Count() > 0)
+    {
+        for (var i = 0; i < jpgnames.Count(); i++)
+        {
+            <div class="col-xs-12 col-sm-4 col-md-3" style="height:200px; margin-bottom: 10px;">
+                <a href="/Content/themes/ictec/images/gallery/pictures_company/@Path.GetFileName(jpgnames[i])" class="GalleryImage">
+                    <img src="/Content/themes/ictec/images/gallery/pictures_company/150x150/@Path.GetFileName(jpgnames[i])" style="width:200px;" />
+                </a>
+            </div>
+        }
+    }
+}
+    </div>
+</div>
+<div class="clearfix" style="margin-bottom:20px;"></div>
+
+<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=5ZPSIHkH223NHzsLY7KUIr4yedi7drrI&height=350"></script>

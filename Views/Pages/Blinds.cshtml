@@ -1,62 +1,50 @@
-﻿@using MvcApplication4_natpot.Models
+﻿@using MvcApplication3.Models
 @{
-    Post Post = (Post)ViewData["Post"];
-    ViewBag.Title = "Жалюзи на окна, рулонные шторы - «Облако»";
-	ViewBag.MetaKeywords = "жалюзи Мурманск, жалюзи на окна, жалюзи фото";
-    ViewBag.MetaDescription = "Изготовление и установка жалюзи и рулонных штор в Мурманске, скидки постоянным клиентам!";
-    ViewBag.MetaTitle = Post.Meta_Title;
-    Layout = "~/Views/Shared/SiteLayout.cshtml";
+    ViewBag.Title = "Index";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/SiteLayout.cshtml";
 }
 
-<article class="article clearfix">
-    @if (Post != null)
-    {
-        @Html.Raw(Post.Content)
-    }
-    else {
-    <h1 class="a_title">@ViewBag.Title</h1>
-
-    <div class="a_body clearfix">
-        <p style="text-align: center;"><em><strong>Раздел находится в стадии наполнения</strong></em></p>
-        <p style="text-align: center;"></p>
-        <table border="1" style="width: 686px; height: 485px; border: 1px solid #000000;">
-            <tbody>
-                <tr>
-                    <td style="text-align: center;"><strong>Тип изделия&nbsp;</strong></td>
-                    <td style="text-align: center;"><strong>Стоимость кв.м.</strong></td>
-                    <td style="text-align: center;"><strong>Изображение</strong></td>
-                </tr>
-                <tr align="center" valign="middle">
-                    <td>
-                        <h2>Жалюзи вертикальные</h2>
-                    </td>
-                    <td>
-                        <h2>&nbsp;от 450 руб.&nbsp;</h2>
-                    </td>
-                    <td style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="/Content/img/all/1_doc_1791.jpg" class="coolimage" rel="article_gallery"><img src="/Content/img/all/1_resized_doc_1791.jpg" alt="вертикальные жалюзи" width="300" style="display: block; margin: 5px auto;" /></a>&nbsp;&nbsp;</td>
-                </tr>
-                <tr align="center" valign="middle">
-                    <td>
-                        <h2>Рулонные шторы</h2>
-                    </td>
-                    <td>
-                        <h2>&nbsp;от 1500 руб.</h2>
-                    </td>
-                    <td><img src="/Content/img/all/1_kd7eip6qnvdlcgeke1pf0vlrc40lhm.jpeg" alt="рулонные жалюзи" width="300" height="225" style="margin-top: 5px; margin-bottom: 5px;" /></td>
-                </tr>
-                <tr align="center" valign="middle">
-                    <td>
-                        <h2>Жалюзи "ЗЕБРА"<br/> премиум-класс</h2>
-                    </td>
-                    <td>
-                        <h2>&nbsp;от 3180 руб.</h2>
-                    </td>
-                    <td><img src="/Content/img/all/1_11.jpg" alt="жалюзи Зебра" width="300" height="225" style="margin-top: 5px; margin-bottom: 5px;" /></td>
-                </tr>
-            </tbody>
-        </table>
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">ЖАЛЮЗИ ЗАВОДА ОБЛАКО</h2>
+        <p style="text-align:justify;">
+            Жалюзи давно стали неотъемлемой частью декора окон. Они легко и быстро регулируют световой поток, создавая комфортные условия в помещении, великолепно дополняют <a href="http://www.galadekor.ru/" target="_blank">шторы и портьеры</a>, создавая законченный облик вашего окна.
+        </p>
+        <h4>Жалюзи от завода Облако:</h4>
+        <p style="text-align:justify;">
+           <ul>
+               <li>плиссе, рулонные, вертикальные, горизонтальные, деревянные;
+               <li>из современных тканей с уникальными свойствами;
+               <li>могут подвергаться многократным стиркам;
+               <li>устойчивы к внешним воздействиям;
+               <li>от стандартных до премиум-класса.
+            </ul>
+        </p>
+        <p style="text-align:justify;">
+            Нажмите кнопку "Записаться на замер", заполните форму и мы перезвоним вам, чтобы подобрать дату и время замера окон для установки жалюзи.
+        </p>
     </div>
-    }
+</div>
+<div class="clearfix"></div>
 
-</article>
+<div class="banner2" style="background-image: url(/content/themes/ictec/images/bg/zhalyuzi3.jpg); "></div>
 
+<div class="content_body">
+    <div class="OnlyText">
+        <h4 style="padding-top:20px; text-align:center;">Подробная информация о жалюзи  завода Облако - на нашем сайте <a href="http://demyr.ru/" target="_blank">demyr.ru</a> </h4>
+        <p style="text-align:center;">
+            Ниже представлена небольшая часть коллекции для украшения вашего окна.
+        </p>
+        <div class="slider multiple-items multiple-items-vert" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/1.jpg" alt="" /></div>
+            @*<div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/2.jpg" alt="" /></div>*@
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/3.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/4.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/5.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/6.jpg" alt="" /></div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=5ZPSIHkH223NHzsLY7KUIr4yedi7drrI&height=350"></script>

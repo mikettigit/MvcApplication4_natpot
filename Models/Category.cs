@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MvcApplication4_natpot.Models
+namespace MvcApplication3.Models
 {
     public class Category
     {

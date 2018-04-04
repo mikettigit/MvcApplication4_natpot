@@ -1,0 +1,180 @@
+﻿@using MvcApplication3.Models
+@{
+    ViewBag.Title = "Index";
+    Layout = Request.IsAjaxRequest() ? null : "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">ДИЛЕРАМ</h2>
+        <p style="text-align:justify;">
+            Приглашаем к сотрудничеству строительные фирмы, организации, дизайн-студии и все заинтересованные компании, желающие эффективно использовать строительный бюджет или иметь дополнительный доход от продажи сопутствующих товаров.
+        </p>
+        <p style="text-align:justify;">
+            Мы предлагаем постоянно пополняемый ассортимент комплектующих и инструментов, дилерские цены, удобную парковку на территории завода.
+        </p>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="banner2" style="background-image: url(/content/themes/ictec/images/bg/ceilings.jpg); "></div>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">Направление НАТЯЖНЫЕ ПОТОЛКИ.</h2>
+        <p style="text-align:justify;">
+            Багет, маскировочная лента.
+        </p>
+        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_baget/1.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_baget/2.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_baget/3.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_baget/4.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_baget/5.jpg" alt="" /></div>
+        </div>
+
+        <p style="text-align:justify;">
+            Платформы, термокольца.
+        </p>
+        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/1.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/2.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/3.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/4.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/5.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/6.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/7.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/8.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/9.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/10.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/11.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_thermorings/12.jpg" alt="" /></div>
+        </div>
+
+        <p style="text-align:justify;">
+            Светильники, лампы, светодиодное освещение
+        </p>
+        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/2.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/3.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/4.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/5.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/6.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/7.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/8.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/9.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/10.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/11.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/12.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_lamps/1.jpg" alt="" /></div>
+        </div>
+
+        <p style="text-align:justify;">
+            Инструмент, расходные материалы
+        </p>
+        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            @{
+                string CurrentGalleryURL = "/Content/themes/ictec/images/gallery/fordealers_tools";
+                var path = Server.MapPath(CurrentGalleryURL);
+                var picSearchPattern = new System.Text.RegularExpressions.Regex(@"$(?<=\.(jpg|png|jpeg|gif))", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                        @*<div class="col-xs-12 col-sm-4 col-md-3" style="height:200px; margin-bottom: 10px;">
+                                <a href="/Content/themes/ictec/images/gallery/pictures_home/@Path.GetFileName(jpgnames[i])" class="GalleryImage">
+                                    <img src="/Content/themes/ictec/images/gallery/pictures_home/150x150/@Path.GetFileName(jpgnames[i])" style="width:200px;" />
+                                </a>
+                            </div>*@
+                    }
+                }
+            }
+        </div>
+
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="banner2" style="background-image: url(/content/themes/ictec/images/bg/zhalyuzi3.jpg); "></div>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">Направление ЖАЛЮЗИ</h2>
+        <p style="text-align:justify;">
+            Наши каталоги тканей для жалюзи и рулонных штор содержат более 500 образцов, что позволит учесть самые разные пожелания ваших заказчиков.
+        </p>
+        <p style="text-align:justify;">
+            Ассортимент комплектующих постоянно пополняется и обновляется, делая солнцезащитные системы все более удобными в использовании.
+        </p>
+        <p style="text-align:justify;">
+            Одновременно с индивидуальными заказами мы предлагаем на реализацию готовые вертикальные жалюзи с фотопечатью, размером 160х160 см. Это – размер стандартного окна, однако он может быть изменен, в соответствии с вашими пожеланиями.
+        </p>
+        <div class="slider multiple-items multiple-items-vert" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/1.jpg" alt="" /></div>
+            @*<div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/2.jpg" alt="" /></div>*@
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/3.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/4.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/5.jpg" alt="" /></div>
+            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/6.jpg" alt="" /></div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="content_body">
+    <div class="OnlyText" style="text-align:center;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-xl-6" style="margin-bottom:20px;">
+            <div>
+                <span class="likeH5 contacts2">Адрес:</span>
+                <p>
+                    <img src="/Content/themes/ictec/images/pin.png" alt="pin" width="16" height="16" /> Мурманск, ул. Героев Рыбачьего, строение 16<br />
+                </p>
+            </div>
+            <div>
+                <span class="likeH5 contacts2">Время работы:</span>
+                <p>
+                    Пн-Сб с 9-00 до 17-00<br />
+                    выходной – воскресенье
+                </p>
+            </div>
+            <div>
+                <span class="likeH5 contacts2">Телефон:</span>
+                <p>
+                    +7 (921) 708-20-25
+                </p>
+            </div>
+            <div>
+                <span class="likeH5 contacts2">Email:</span>
+                <p>
+                    <a href="mailto:Oblako-51@yandex.ru">Oblako-51@yandex.ru</a>
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="float:right;">
+            <div>
+                <span class="likeH5 contacts2">Адрес офиса:</span>
+                <p>
+                    <img src="/Content/themes/ictec/images/pin.png" alt="pin" width="16" height="16" /> Мурманск, ул. Буркова/Книповича, 11/18 <br />
+                </p>
+            </div>
+            <div>
+                <span class="likeH5 contacts2">Время работы:</span>
+                <p>
+                    Пн-Сб с 11-00 до 19-00<br />
+                    выходной – воскресенье
+                </p>
+            </div>
+            <div>
+                <span class="likeH5 contacts2">Телефон:</span>
+                <p>
+                    +7 (8152) 44-20-25
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0nvDlixzVWmhHYBRxgDAUH4doUgSeUR9&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=true" type="text/javascript" charset="utf-8" async></script>

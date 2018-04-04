@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace MvcApplication4_natpot.Helpers
+namespace discounter.Models.JsonResults
 {
     public class JsonMessage
     {
         private bool _result;
         private string _message;
         private Object _object;
-        private string _helpURL;
 
         public bool Result
         {
@@ -27,10 +26,5 @@ namespace MvcApplication4_natpot.Helpers
             set { _object = value; } 
         }
 
-        public string HelpURL
-        {
-            get { return _helpURL; }
-            set { _helpURL = value; }
-        }
     }
 }

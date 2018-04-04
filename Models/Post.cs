@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MvcApplication4_natpot.Models
+namespace MvcApplication3.Models
 {
     public class Post
     {
@@ -11,9 +11,6 @@ namespace MvcApplication4_natpot.Models
         public string Title;
         public string Description;
         public string Content;
-        public string Meta_Keywords;
-        public string Meta_Description;
-        public string Meta_Title;
         public DateTime Date;
         public string DateString
         {
@@ -26,8 +23,6 @@ namespace MvcApplication4_natpot.Models
             Title = "";
             Description = "";
             Content = "";
-            Meta_Keywords = "";
-            Meta_Description = "";
             Date = DateTime.MinValue;
         }
     }

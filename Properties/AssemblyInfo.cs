@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MvcApplication4_natpot")]
+[assembly: AssemblyTitle("MvcApplication3")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MvcApplication4_natpot")]
+[assembly: AssemblyProduct("MvcApplication3")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("46dc1792-a9c1-45e4-a0ad-9b1c645b6468")]
+[assembly: Guid("0c11f858-0ced-4a3e-89af-41de8dbbf310")]
 
 // Version information for an assembly consists of the following four values:
 //
