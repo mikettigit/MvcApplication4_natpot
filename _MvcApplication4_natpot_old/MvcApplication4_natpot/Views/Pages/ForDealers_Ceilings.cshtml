@@ -1,0 +1,103 @@
+﻿@using MvcApplication4_natpot.Models
+@{
+    Post Post = (Post)ViewData["Post"];
+    ViewBag.Title = "Производство натяжных потолков, информация для дилеров - «Облако»";
+    ViewBag.MetaKeywords = "потолки дилерам, натяжные потолки дилером";
+    ViewBag.MetaDescription = "Приглашаем к сотрудничеству строительные фирмы, организации, дизайн-студии и все заинтересованные компании, желающие эффективно использовать строительный бюджет";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<div class="article clearfix">
+@if (Post != null)
+    {
+    @Html.Raw(Post.Content)
+    }
+    else {
+    <h1 class="a_title">Дилерам</h1>
+
+    @*<div class="clearfix">
+        <p>Приглашаем к сотрудничеству строительные фирмы, организации, дизайн-студии и все заинтересованные компании, желающие эффективно использовать строительный бюджет.</p>
+        <p><a href="/Content/img/all/1_evro_stroy.jpg" class="coolimage" rel="article_gallery"><img src="/Content/img/all/1_resized_evro_stroy.jpg" alt="рп" /></a></p>
+    </div>*@
+
+    <div class="a_list clearfix">
+        <h2 class="al_title">
+            <a href="/List/ForDealers/50" class="al_title_link">
+                Багет, маскировочная лента
+            </a>
+        </h2>
+
+        <div class="al_prebody clearfix">
+            <a href="/List/ForDealers/50" class="al_preimage_link">
+                <img src="/Content/img/prebodyimages/f3be5eb7ff15.jpg" class="al_preimage_img">
+            </a>
+        </div>
+
+        <a href="/List/ForDealers/50" class="al_more">подробнее...</a>
+    </div>
+
+    <div class="a_list clearfix">
+        <h2 class="al_title">
+            <a href="/List/ForDealers/53" class="al_title_link">
+                Платформы, термокольца
+            </a>
+        </h2>
+
+        <div class="al_prebody clearfix">
+            <a href="/List/ForDealers/53" class="al_preimage_link">
+                <img src="/Content/img/prebodyimages/0e915db6326b.jpg" class="al_preimage_img">
+            </a>
+        </div>
+
+        <a href="/List/ForDealers/53" class="al_more">подробнее...</a>
+    </div>
+
+    <div class="a_list clearfix">
+        <h2 class="al_title">
+            <a href="/List/ForDealers/55" class="al_title_link">
+                Светильники, лампы, светодиодное освещение
+            </a>
+        </h2>
+
+        <div class="al_prebody clearfix">
+            <a href="/List/ForDealers/55" class="al_preimage_link">
+                <img src="/Content/img/prebodyimages/21c52f533c0c.jpg" class="al_preimage_img">
+            </a>
+        </div>
+
+        <a href="/List/ForDealers/55" class="al_more">подробнее...</a>
+    </div>
+
+    <div class="a_list clearfix">
+        <h2 class="al_title">
+            <a href="/List/ForDealers/57" class="al_title_link">
+                Каталоги, рекламная продукция
+            </a>
+        </h2>
+
+        <div class="al_prebody clearfix">
+            <a href="/List/ForDealers/57" class="al_preimage_link">
+                <img src="/Content/img/prebodyimages/8d2a5f7d4afa.jpg" class="al_preimage_img">
+            </a>
+        </div>
+
+        <a href="/List/ForDealers/57" class="al_more">подробнее...</a>
+    </div>
+
+    <div class="a_list clearfix">
+        <h2 class="al_title">
+            <a href="/List/ForDealers/59" class="al_title_link">
+                Инструмент, расходные материалы
+            </a>
+        </h2>
+
+        <div class="al_prebody clearfix">
+            <a href="/List/ForDealers/59" class="al_preimage_link">
+                <img src="/Content/img/prebodyimages/01a0683665f3.jpg" class="al_preimage_img">
+            </a>
+        </div>
+
+        <a href="/List/ForDealers/59" class="al_more">подробнее...</a>
+    </div>
+}
+</div>

@@ -1,0 +1,29 @@
+﻿@using MvcApplication4_natpot.Models
+@{
+    List<Post> Posts = (List<Post>)ViewData["Posts"];
+    Category Category = (Category)ViewData["Category"];
+    ViewBag.Title = "Скидки и акции на натяжные потолки - «Облако»";
+	ViewBag.MetaKeywords = "акции по натяжным потолкам, натяжные потолки скидка";
+    ViewBag.MetaDescription = "Акции и скидки на натяжные потолки от нашей компании";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<article class="article clearfix">
+
+    <!--h1 class="a_title">@Category.Translate</h1>-->
+	<h1>Скидки и акции на натяжные потолки </h1>
+
+    @foreach (Post post in Posts) {
+        <div class="n_list">
+            <div class="n_title">
+                <span class="n_date">@post.Date.ToString("dd.MM.yyyy"):&nbsp;</span>
+                <a href="/List/@Category.Name/@post.Id">@post.Title</a>
+            </div>
+            @Html.Raw(post.Description)
+            <br/>
+            <a href="/List/@Category.Name/@post.Id" class="more">подробнее...</a>
+            <div class="clear"></div>
+        </div>
+    }
+    
+</article>

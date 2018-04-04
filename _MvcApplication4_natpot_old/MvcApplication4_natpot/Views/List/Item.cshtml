@@ -1,0 +1,27 @@
+﻿
+@using MvcApplication4_natpot.Models
+@{
+    Post Post = (Post)ViewData["Post"];
+    Category Category = (Category)ViewData["Category"];
+    ViewBag.Title = Post.Title;
+    ViewBag.MetaKeywords = Post.Meta_Keywords;
+    ViewBag.MetaDescription = Post.Meta_Description;
+	ViewBag.MetaTitle = Post.Meta_Title;
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<article class="article clearfix">
+    
+    <h1 class="a_title">@Post.Title</h1>
+
+    <div class="n_body">
+        <div class="n_title">
+            <span class="n_date">@Post.Date.ToString("dd.MM.yyyy")</span>
+        </div>
+        @Html.Raw(Post.Content)  
+        <div class="clear"></div>
+        <br/><br/>
+        <a href="/List/@Category.Name" class="more"><< вернуться к списку</a>
+    </div>
+
+</article>
