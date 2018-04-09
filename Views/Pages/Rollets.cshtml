@@ -16,7 +16,61 @@
             <div><img src="/Content/themes/ictec/images/gallery/rollets/3.jpg" alt="" /></div>
             <div><img src="/Content/themes/ictec/images/gallery/rollets/4.jpg" alt="" /></div>
         </div>
+
+        <h4>Защита от взлома</h4>
         <p style="text-align:justify;">
+            Рольставни  защищают помещение от несанкционированного проникновения злодеев, витрины от вандалов, а благодаря своей прочности  противостоят механическому воздействию.
+        </p>
+
+        <h4>Защита от шума</h4>
+        <p style="text-align:justify;">
+            Рольставни – это  шумозащитная конструкция, позволяющая Вам не отвлекаться на посторонние звуки во время работы или отдыха.
+        </p>
+
+        <h4>Экономия энергии</h4>
+        <p style="text-align:justify;">
+            Одна из главных функций рольставней – экономия тепловой энергии вто время когда Вас нет на даче, загородном даме, квартире, офисе. При опущенном полотне между рольставней и окном создается воздушная прослойка, которая берет на себя роль «термоса». Благодаря этому рольставни способствуют созданию оптимального температурного режима в доме, сохраняя тепло в непогоду.
+        </p>
+
+        <h4>Защита от посторонних взглядов</h4>
+        <p style="text-align:justify;">
+            Рольставни помогают Вам почувствовать себя в безопасности, укрывшись от чужих взглядов, и полностью сосредоточиться на любимом хобби, интересной работе или полноценном отдыхе.
+        </p>
+
+        <h4>Защита от непогоды и солнца</h4>
+        <p style="text-align:justify;">
+            С помощью рольставней  Вы  сможете защитить Ваше жилище от дождей, ветров и прочей непогоды. А в яркую солнечную погоду, опустив рольставни, Вы убережете предметы интерьера от выгорания, создав в помещении ощущение тепла.
+        </p>
+    </div>
+</div>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">ВОРОТА</h2>
+        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            @{
+                string CurrentGalleryURL = "/Content/themes/ictec/images/gallery/gates";
+                var path = Server.MapPath(CurrentGalleryURL);
+                var picSearchPattern = new System.Text.RegularExpressions.Regex(@"$(?<=\.(jpg|png|jpeg|gif))", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="banner2" style="background-image: url(/content/themes/ictec/images/bg/rollets.jpg); "></div>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <p style="text-align:justify; margin-top:40px;">
             Технологическое устройство роллет - металлические ламели, соединенные при помощи полиуретановых вставок, образующие единое гибкое полотно. Роллетные системы имеют ручной или электрический привод, выбор которого зависит от места крепления роллет и их веса.
         </p>
         <p style="text-align:justify;">
@@ -33,7 +87,7 @@
         <p style="text-align:justify;">
             Такие роллетные системы повсеместно становятся неотъемлемой частью фасадов, вне зависимости от климатических зон.
         </p>
-        
+
         <p style="text-align:justify;">
             Роллетные ворота обладают значительно большим весом по сравнению с оконными роллетами. Как правило, для управления ими, выбирают электрические приводы. Изготавливают ламели из более широких, прочных профилей, методом прокатки или методом экструзии (продавливания). Вторые считаются более прочными, т.к. имеют большую толщину и поперечное ребро жесткости. Их применяют в системах, для которых требования к максимальным нагрузкам особенно высоки.
         </p>
@@ -45,9 +99,6 @@
         </p>
     </div>
 </div>
-<div class="clearfix"></div>
-
-<div class="banner2" style="background-image: url(/content/themes/ictec/images/bg/rollets.jpg); "></div>
 
 <div class="content_body">
     <div class="OnlyText">
@@ -64,122 +115,124 @@
         <p style="text-align:justify;">
             Комбинированные способы монтажа встречаются значительно реже. Специалисты предлагают их только в случае необходимости.
         </p>
+        <p style="text-align:center;">
+            <img src="/Content/themes/ictec/images/rollets_installation_types.jpg" />
+        </p>
         <p style="text-align:justify;">
             Приглашение на замеры через форму сайта даёт вам скидку 6% при оформлении договора!
         </p>
-        <h4 style="padding-top:20px; ">Таблица стоимости роллет в зависимости от высоты и ширины проема</h4>
-        <p style="text-align:justify;">
-
-            <table id="custom_table" style="padding:0 0 20px 0; width:100%;">
-                <tbody>
-                    <tr>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <table style="width: 100%;">
-                                <tbody>
-                                    <tr>
-                                        <td style="width: 50%;"></td>
-                                        <td style="width: 50%;">ширина</td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width: 50%;">высота</td>
-                                        <td style="width: 50%;"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">700</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">1000</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">1500</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">2000</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">2300</span></h3>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">700</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">4385</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">6030</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">6570</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">8280</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">8735</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">1000</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">5235</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">6645</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">8095</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">10320</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">10920</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">1500</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">6090</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">7845</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">9630</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">12365</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">13110</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">2000</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">7370</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">9630</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">11935</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">15425</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">16380</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">2500</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">8225</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">10825</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">13470</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">17460</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">18565</td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
-                            <h3><span style="color: #4b7e33;">2700</span></h3>
-                        </td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;"></td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">11560</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">14435</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px; ">18735</td>
-                        <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">19920</td>
-                    </tr>
-                </tbody>
-            </table>
-        </p>
-        <p style="text-align:justify;">
-            Цены в таблице приведены в рублях, с учетом следующих параметров:
-        </p>
-        <p style="text-align:justify;">
-            <ul>
-                <li><span style="font-style:italic">Тип профиля</span>: AR/39N роликовой прокатки
-                <li><span style="font-style:italic">Вариант управления</span>: Ручное управление (Пружинно-иннерционный механизм)
-                <li><span style="font-style:italic">Ригель ручной</span>: Есть
-                <li><span style="font-style:italic">Тип монтажа</span>: встроенный
-            </ul>
-        </p>
-        <p style="text-align:justify;">
-            <strong>Стоимость монтажа изделия не включена в цену. Стоимость доставки не включена в цену.</strong>
-        </p>
+        @*<h4 style="padding-top:20px; ">Таблица стоимости роллет в зависимости от высоты и ширины проема</h4>
+            <p style="text-align:justify;">
+                <table id="custom_table" style="padding:0 0 20px 0; width:100%;">
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <table style="width: 100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 50%;"></td>
+                                            <td style="width: 50%;">ширина</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 50%;">высота</td>
+                                            <td style="width: 50%;"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">700</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">1000</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">1500</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">2000</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">2300</span></h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">700</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">4385</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">6030</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">6570</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">8280</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">8735</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">1000</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">5235</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">6645</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">8095</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">10320</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">10920</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">1500</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">6090</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">7845</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">9630</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">12365</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">13110</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">2000</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">7370</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">9630</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">11935</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">15425</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">16380</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">2500</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">8225</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">10825</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">13470</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">17460</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">18565</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center;">
+                                <h3><span style="color: #4b7e33;">2700</span></h3>
+                            </td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;"></td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">11560</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">14435</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px; ">18735</td>
+                            <td style="border: 1px solid; width: 100px; height: 50px; text-align: center; padding: 30px 0 20px 20px;">19920</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </p>
+            <p style="text-align:justify;">
+                Цены в таблице приведены в рублях, с учетом следующих параметров:
+            </p>
+            <p style="text-align:justify;">
+                <ul>
+                    <li><span style="font-style:italic">Тип профиля</span>: AR/39N роликовой прокатки
+                    <li><span style="font-style:italic">Вариант управления</span>: Ручное управление (Пружинно-иннерционный механизм)
+                    <li><span style="font-style:italic">Ригель ручной</span>: Есть
+                    <li><span style="font-style:italic">Тип монтажа</span>: встроенный
+                </ul>
+            </p>
+            <p style="text-align:justify;">
+                <strong>Стоимость монтажа изделия не включена в цену. Стоимость доставки не включена в цену.</strong>
+            </p>*@
         <p style="text-align:justify;">
             <strong>Ролставни в Мурманске от завода «Облако» - гарантия безопасности Вашего имущества!</strong>
         </p>

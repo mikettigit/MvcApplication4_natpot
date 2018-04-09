@@ -36,12 +36,19 @@
             Ниже представлена небольшая часть коллекции для украшения вашего окна.
         </p>
         <div class="slider multiple-items multiple-items-vert" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
-            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/1.jpg" alt="" /></div>
-            @*<div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/2.jpg" alt="" /></div>*@
-            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/3.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/4.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/5.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/fordealers_blinds/6.jpg" alt="" /></div>
+            @{
+                string CurrentGalleryURL = "/Content/themes/ictec/images/gallery/fordealers_blinds";
+                var path = Server.MapPath(CurrentGalleryURL);
+                var picSearchPattern = new System.Text.RegularExpressions.Regex(@"$(?<=\.(jpg|png|jpeg|gif))", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
         </div>
     </div>
 </div>
