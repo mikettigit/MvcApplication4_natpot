@@ -44,27 +44,7 @@
     </div>
 </div>
 
-<div class="content_body">
-    <div class="OnlyText">
-        <h2 style="padding-top:20px;">ВОРОТА</h2>
-        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
-            @{
-                string CurrentGalleryURL = "/Content/themes/ictec/images/gallery/gates";
-                var path = Server.MapPath(CurrentGalleryURL);
-                var picSearchPattern = new System.Text.RegularExpressions.Regex(@"$(?<=\.(jpg|png|jpeg|gif))", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-                var picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
-                if (picnames.Count() > 0)
-                {
-                    for (var i = 0; i < picnames.Count(); i++)
-                    {
-                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
-                    }
-                }
-            }
-        </div>
-    </div>
-</div>
-<div class="clearfix"></div>
+
 
 <div class="banner2" style="background-image: url(/content/themes/ictec/images/bg/rollets.jpg); "></div>
 
@@ -236,6 +216,28 @@
         <p style="text-align:justify;">
             <strong>Ролставни в Мурманске от завода «Облако» - гарантия безопасности Вашего имущества!</strong>
         </p>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="content_body">
+    <div class="OnlyText">
+        <h2 style="padding-top:20px;">ВОРОТА</h2>
+        <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
+            @{
+                string CurrentGalleryURL = "/Content/themes/ictec/images/gallery/gates";
+                var path = Server.MapPath(CurrentGalleryURL);
+                var picSearchPattern = new System.Text.RegularExpressions.Regex(@"$(?<=\.(jpg|png|jpeg|gif))", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
+        </div>
     </div>
 </div>
 <div class="clearfix"></div>
