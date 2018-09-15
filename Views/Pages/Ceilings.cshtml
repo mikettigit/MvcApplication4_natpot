@@ -8,8 +8,9 @@
     <div class="OnlyText">
         <h2 style="padding-top:20px;">Натяжные потолки</h2>
         <p style="text-align:justify;">
-            Современные технологии и комплектующие открывают практически неограниченные возможности для создания уникальных натяжных потолков за минимальную цену.
-        </p>
+            Современные технологии и комплектующие открывают практически неограниченные возможности для создания уникальных натяжных потолков за оптимальную цену.
+        </p><p style="text-align:center; margin-bottom:20px;">
+            <a href="https://www.youtube.com/watch?v=qY1q703TYsg" target="_blank"><img src="/Content/themes/ictec/images/rolik_preview.jpg" class="rolik_preview" style="width:100%; max-width:852px;" /></a></p>
         <p style="text-align:justify;">
             Ваш потолок может быть спаян из нескольких полотен различного цвета и фактуры, быть глянцевым или матовым, парящим или перфорированным, именно таким, каким хотите его видеть Вы.
         </p>
@@ -43,10 +44,10 @@
     <div class="banner" style="color: #3d5861; padding-left: 150px; background-image: url(/content/themes/ictec/images/bg/ceilings.jpg); height:250px; ">
         <div class="content_body">
             <h1 style=" text-align: center; display: block; margin-top: 0;">
-                Потолки стрейч!
+                Уникальное предложение 2018 года
             </h1>
             <ul style=" text-align: center; display: block; " class="hidden-xs hidden-sm visible-md visible-lg">
-                <li style="font-size:34px;"><strong>Уникальное предложение 2018 года</strong>
+                <li style="font-size:34px;"><strong>Потолки стрейч!</strong>
                 <li><strong>Инновационный продукт, который запущен 13.03.2018 в производство завода "ОБЛАКО".</strong>
                 <li><strong>Установка при комнатной температуре 20-25 гр. без использования тепловой пушки</strong>
                 <li><span style="font-size: 24px;">Узнайте больше...</span></li>
@@ -66,13 +67,22 @@
         
         <h4 style="color: #d6404b;">Белые натяжные потолки</h4>
         <p>
-            Белые потолки считаются классическими. Матовые и сатиновые полотна, в отличии от глянцевых, создают мягкое отражение света, приближая потолок к традиционному. При этом сатиновая поверхность с оригинальной фактурой добавляет интерьеру особый шарм.
+            Белые потолки считаются классическими. Матовые и сатиновые полотна, в отличии от глянцевых, создают мягкое отражение света, приближая потолок к традиционному. При этом сатиновая поверхность с оригинальной фактурой добавляет интерьеру особый шарм. Глянцевые белые потолки за счет своего отражения способны визуально поднять ваш потолок и увеличить объем помещения в высоту.
         </p>
         <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
-            <div><img src="/Content/themes/ictec/images/gallery/white/1.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/white/2.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/white/3.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/white/4.jpg" alt="" /></div>
+            @{
+                string CurrentGalleryURL = "/Content/themes/ictec/images/gallery/white";
+                var path = Server.MapPath(CurrentGalleryURL);
+                var picSearchPattern = new System.Text.RegularExpressions.Regex(@"$(?<=\.(jpg|png|jpeg|gif))", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                var picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
         </div>
 
         <h4 style="color: #d6404b;">Цветные натяжные потолки</h4>
@@ -80,10 +90,18 @@
             Голубые, как небо, зеленые, как трава или оранжевые, как спелые апельсины - потолки могут быть любыми. Более 200 цветов и оттенков, различное их сочетание, разные фактуры помогут вам создать неповторимый и уникальный проект. Выбирая потолок, выбирайте лучшее!
         </p>
         <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
-            <div><img src="/Content/themes/ictec/images/gallery/color/4.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/color/2.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/color/3.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/color/1.jpg" alt="" /></div>
+            @{
+                CurrentGalleryURL = "/Content/themes/ictec/images/gallery/color";
+                path = Server.MapPath(CurrentGalleryURL);
+                picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
         </div>
 
         <h4 style="color: #d6404b;">Парящие натяжные потолки</h4>
@@ -91,10 +109,18 @@
             Если вы решаете задачу - лаконичность и минимализм в интерьере, возможное решение - парящие натяжные потолки. Что образует эффект парения? Особым образом закрепленная светодиодная лента, игра насыщенностью и цветом светового потока и квалифицированный монтаж.
         </p>
         <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
-            <div><img src="/Content/themes/ictec/images/gallery/flying/1.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/flying/2.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/flying/3.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/flying/4.jpg" alt="" /></div>
+            @{
+                CurrentGalleryURL = "/Content/themes/ictec/images/gallery/flying";
+                path = Server.MapPath(CurrentGalleryURL);
+                picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
         </div>
 
         <h4 style="color: #d6404b;">
@@ -104,12 +130,18 @@
             Перфорированные потолки украшают кухни и спальни, коридоры и ванные комнаты, гостиные и офисы. Перфорация и дополнительное освещение создают необычные эффекты. Если вы наполнены яркими образами и легко принимаете смелые решения - эти потолки для Вас!
         </p>
         <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
-            <div><img src="/Content/themes/ictec/images/gallery/perforated/1.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/perforated/2.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/perforated/3.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/perforated/1.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/perforated/2.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/perforated/3.jpg" alt="" /></div>
+            @{
+                CurrentGalleryURL = "/Content/themes/ictec/images/gallery/perforated";
+                path = Server.MapPath(CurrentGalleryURL);
+                picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
         </div>
 
         <h4 style="color: #d6404b;">
@@ -119,10 +151,18 @@
             "Эксклюзивность во всем!"- девиз тех, кто выбирает арт-печать на натяжном потолке. Начинаясь над головой, рисунок может переходить на натяжные стены и в сочетании со светодиодной подсветкой создавать 3D-эффекты. Отличный подарок - цветы любимым на потолке!
         </p>
         <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
-            <div><img src="/Content/themes/ictec/images/gallery/art/1.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/art/2.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/art/3.jpg" alt="" /></div>
-            <div><img src="/Content/themes/ictec/images/gallery/art/4.jpg" alt="" /></div>
+            @{
+                CurrentGalleryURL = "/Content/themes/ictec/images/gallery/art";
+                path = Server.MapPath(CurrentGalleryURL);
+                picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
         </div>
 
         <h4 style="color: #d6404b;">
@@ -132,7 +172,18 @@
             Вы любите комфорт? Обратите внимание на потолки с объемным изображением: многоуровневые, с максимальным использованием всех возможностей дополнительного освещения, они создают обстановку для полноценного отдыха.
         </p>
         <div class="slider multiple-items multiple-items-hor" align="center" style="width: 90%; left: 50%; margin-left: -45%;">
-            <div><img src="/Content/themes/ictec/images/gallery/3d/2.jpg" alt="" /></div>
+            @{
+                CurrentGalleryURL = "/Content/themes/ictec/images/gallery/3d";
+                path = Server.MapPath(CurrentGalleryURL);
+                picnames = Directory.GetFiles(path).Where(f => picSearchPattern.IsMatch(f)).OrderBy(f => f).ToList();
+                if (picnames.Count() > 0)
+                {
+                    for (var i = 0; i < picnames.Count(); i++)
+                    {
+                        <div><img src="@(CurrentGalleryURL + "/" + @Path.GetFileName(picnames[i]))" alt="" /></div>
+                    }
+                }
+            }
         </div>
     </div>
 </div>
@@ -141,7 +192,7 @@
 
 <div class="content_body">
     <div class="OnlyText">
-        <h2 style=" padding-bottom: 0; ">Фактуры и оттенки</h2>
+        <h2 style=" padding-bottom: 0; ">Фактуры и оттенки по каталогу завода "ОБЛАКО"</h2>
         <h4 style="padding-top:0;">Пленки для натяжных потолков</h4>
         <iframe src='//docs.google.com/viewer?url=natpotolki.ru/Components/catalog.pdf&embedded=true' style='width: 100%; height: 600px;' frameborder='0'>Ваш браузер не поддерживает фреймы</iframe>
     </div>

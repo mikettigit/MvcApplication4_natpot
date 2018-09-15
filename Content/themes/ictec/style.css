@@ -74,11 +74,17 @@ body {margin: 0; padding: 0; font-size: 14px; font-family: Arial, Helvetica, san
     font-weight: bolder;
 }
 
+@media (max-width: 992px) {
+.navbar-default .navbar-nav>li>a {
+	color: white !important;
+}
+}
+
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #52a2b6 !important;
 }
 
-.navbar-default .navbar-nav>li.active>a, .navbar-default .navbar-nav>li>a:hover {background: url(images/sidebar2.png) 0 0 repeat; color: #fff;}
+.navbar-default .navbar-nav>li.active>a, .navbar-default .navbar-nav>li>a:hover {background: #52a2b6; color: white;}
 
 .navbar-toggle {
     background-color: white !important;
@@ -229,7 +235,7 @@ dl dd {float: none; width: 100%;}
 .sidebar_footer .copyright {padding: 10px 0 0 0; display: none;}
 .akcia3_wrap {padding-left: 0 !important;}
 #contacts {text-align:center;}
-.call_back {display: none;}
+
 .navbar-brand {display: block !important;}
 }
 /* Minimus */
