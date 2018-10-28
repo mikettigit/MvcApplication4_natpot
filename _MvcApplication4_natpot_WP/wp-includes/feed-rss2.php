@@ -107,7 +107,8 @@ do_action( 'rss_tag_pre', 'rss2' );
 				<?php $content = get_extended( get_post_field('post_content', get_the_ID() ) ); ?>
 
 				<description><![CDATA[<?php echo $content['main']; ?>]]></description>
-
+				<price><?php echo get_post_meta($post->ID, 'price', true); ?>
+</price>
 				
 <?php rss_enclosure(); ?>
 	

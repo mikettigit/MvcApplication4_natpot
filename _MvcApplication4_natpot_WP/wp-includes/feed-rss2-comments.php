@@ -77,6 +77,8 @@ do_action( 'rss_tag_pre', 'rss2-comments' );
 </meta_keywords>
 	<meta_title><?php echo get_post_meta($post->ID, 'title', true); ?>
 </meta_title>
+	<price><?php echo get_post_meta($post->ID, 'price', true); ?>
+</price>
 </item>
 
 
